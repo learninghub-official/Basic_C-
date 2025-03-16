@@ -183,7 +183,66 @@ void print13(int n){
     cout<<endl;
     }
 }
-
+void print14(int n){
+    int i,j,k = 0;
+    for(i =1;i<=n;i++){
+        for(j=1;j<=i;j++){
+            k = k+1;
+            cout<<k; 
+        }   
+    cout<<endl;
+    }
+}
+void print15(int n){
+    int i;
+    char j = 'A';
+    for(i =0;i<n;i++){
+        for(j='A';j<='A'+i;j++){
+            cout<<j;
+        }   
+    cout<<endl;
+    }
+}
+void print16(int n){
+    int i;
+    char j = 'A';
+    for(i =0;i<n;i++){
+        for(j='A';j<='A'+(n-1)-i;j++){
+            cout<<j;
+        }   
+    cout<<endl;
+    }
+}
+void print17(int n){
+    int i,j;
+    char k = 'A';
+    for(i =1;i<=n;i++){
+        k = 'A'+i-1;
+        for(j=1;j<=i;j++){
+            cout<<k;
+        }   
+    cout<<endl;
+    }
+}
+void print18(int n){
+    int i,j;
+    for(i =0;i<n;i++){
+        for(j=0;j<n-i;j++){
+            cout<<" ";
+        }
+        char k = 'A';
+        int breakpoint = (2*i+1)/2;
+        for(j=1;j<=2*i+1;j++){
+            cout<<k;
+            if(j<=breakpoint) k++;
+            else k--;
+        }
+        for(j=0;j<n-i;j++){
+            cout<<" ";
+        }   
+    cout<<endl;
+    }
+}
 int main(){
     int n;
     cin>>n;
@@ -199,7 +258,12 @@ int main(){
     // print10(n);
     // print11(n);
     // print12(n);
-    print13(n);
+    // print13(n);
+    // print14(n);
+    // print15(n);
+    // print16(n);
+    // print17(n);
+    print18(n);
 }
 
 
