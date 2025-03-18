@@ -243,6 +243,117 @@ void print18(int n){
     cout<<endl;
     }
 }
+void print19(int n){
+    int i,j;
+    char k = 'A';
+    for(i =1;i<n;i++){
+        for(j=1;j<=i;j++){
+            cout<<k;
+        } 
+    cout<<endl;
+    }
+}
+void print20(int n){
+    int i,j;
+    char k = 'A';
+    for(i=0;i<=n;i++){
+        for(k='A'+n-i;k<='A'+n;k++){
+            cout<<k;
+        }
+    cout<<endl;
+    }
+}
+void print21(int n){
+    int i, j;
+    char k = 'A';
+    for (i = 0; i < n; i++) { 
+        for (k = 'A' + n - 1; k >= 'A' + n - 1 - i; k--) {  // Corrected loop condition
+            cout << k << " ";  // Print before decrementing
+        }
+        cout << endl;
+    }
+}
+void print22(int n){
+    int i, j;
+    for (i=0;i<n;i++) { 
+        for (j=0;j<n-i;j++) { 
+            cout <<"*"; 
+        }
+        for(j=0;j<=i-1;j++){
+            cout<<" ";
+        }
+        for(j=0;j<=i-1;j++){
+            cout<<" ";
+        }
+        for(j=0;j<n-i;j++){
+            cout<<"*";
+        } 
+        cout << endl;
+    }
+
+    // downward shape 
+    for (i=0;i<n;i++) { 
+        for (j=0;j<i+1;j++){
+            cout<<"*";
+        }
+        for (j=1;j<n-i;j++) { 
+            cout <<" "; 
+        }
+        for(j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        for (j=0;j<i+1;j++){
+            cout<<"*";
+        }
+    cout << endl;
+    }
+}
+void print23(int n){
+    int i, j;
+    for (i=0;i<n;i++) { 
+        for (j=0;j<i+1;j++){
+            cout<<"*";
+        }
+        for (j=1;j<n-i;j++) { 
+            cout <<" "; 
+        }
+        for(j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        for (j=0;j<i+1;j++){
+            cout<<"*";
+        }
+        cout << endl;
+    }
+    // downward shape 
+    for (i=0;i<n;i++) { 
+        for (j=0;j<n-i-1;j++) { 
+            cout <<"*"; 
+        }
+        for(j=0;j<=i;j++){
+            cout<<" ";
+        }
+        for(j=0;j<=i;j++){
+            cout<<" ";
+        }
+        for(j=0;j<n-i-1;j++){
+            cout<<"*";
+        } 
+        cout << endl;
+    }
+}
+void print24(int n){
+    int i, j;
+    for (i=0;i<n;i++) { 
+        for (j=0;j<n;j++){
+            if (j == 0 || j == n-1 || i==0 || i == n-1) {
+                cout<<"*";
+            }
+            else cout<<" ";
+        }
+        cout << endl;
+    }
+}
 int main(){
     int n;
     cin>>n;
@@ -263,7 +374,13 @@ int main(){
     // print15(n);
     // print16(n);
     // print17(n);
-    print18(n);
+    // print18(n);
+    // print19(n);
+    // print20(n);
+    // print21(n);
+    // print22(n);
+    // print23(n);
+    print24(n);
 }
 
 
