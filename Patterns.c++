@@ -380,6 +380,20 @@ void print26(int n){
         cout << endl;
     }
 }
+void print27(int n){
+    int i, j;
+    for (i=0;i<2*n-1;i++) {   //for iteration
+        for (j=0;j<2*n-1;j++){    // for 1,2,3,4
+            int top = i;
+            int bottom = j;
+            int right = ((2*n-1)-1) - j;
+            int left = ((2*n-1)-1) - i;
+            cout<<n - min(min(top,bottom),min(right,left));
+
+        }
+        cout << endl;
+    }
+}
 
 int main(){
     int n;
@@ -410,6 +424,7 @@ int main(){
     // print24(n);
     // print25(n);
     // print26(n);
+    print27(n);
 }
 
 
