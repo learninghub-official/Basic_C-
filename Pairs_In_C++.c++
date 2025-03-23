@@ -45,11 +45,26 @@ void explainVectors() {
     vector<int> v2(v1);
 
     vector<int>::iterator it = v.begin();
-    it++;
-    cout << *(it) << " ";
+    // it++;
+    // cout << *(it) << " " <<endl;
+    // it = it+2;
+    // cout << *(it) << " " <<endl;
+
+
+    for(vector<int>::iterator it = v.begin() ; it != v.end(); it++){
+        cout<< *(it)<<" " <<endl;
+    }
+
+    for(auto it = v.begin() ; it != v.end() ; it++){
+        cout<< *(it)<<" " <<endl;
+    }
+
+    for(auto it: v){
+        cout<< it <<" " <<endl;
+    } 
 }
 int main(){
-    explainPairs();
+    // explainPairs();
     explainVectors();
 }
 
