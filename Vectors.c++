@@ -1,6 +1,21 @@
 #include<iostream>
 #include <utility>
+#include <list>
+
 using namespace std;
+
+// Here we are studing Container 
+
+
+// Container is a collection of elements
+// Container is a class that can hold a collection of elements
+// Container is a class that can hold a collection of elements of same data type
+// Container is a class that can hold a collection of elements of different data type
+// Container is a class that can hold a collection of elements of different data type and size
+
+
+// 1. Pairs
+
 
 void explainPairs(){
     pair<int, int> p = {1,2};
@@ -12,27 +27,24 @@ void explainPairs(){
     pair<int, int> arr[] = {{1,2},{3,4},{5,6},{7,8}};
     cout<< "The pairs in arrya are: " <<arr[0].first<<","<<arr[1].second<<","<<arr[2].first<<","<<arr[3].first<< endl;
 } 
-
 // void explainVectors(){
 //     vector <int> v;
 //     v.emplace_back(4);
 //     v.push_back(3);
-
 //     vector<pair<int,int>> vp;
 //     vp.emplace_back(1,2);
 //     vp.push_back({6,7});
-
 //     vector<int> v(5,100);    // {100,100,100,100,100}
 //     vector<int> v(5);
 //     v.push_back(7);
-
 //     vector<int> v1(5,20);
 //     vector<int> v(v1);
-
 //     vector<int>::iterator it = v.begin();
 //     it++;
 //     cout<< *(it)<< " ";
 // }
+
+// 2. Vectors 
 
 void explainVectors() {
     // how to declare a vector
@@ -98,13 +110,61 @@ void explainVectors() {
     vector<int> copy(2,20);
     v.insert(v.begin(), copy.begin(), copy.end());
 
+    // How to check the size of a vector 
+
+    cout<<v.size();
+
+    // How to pop the last element from the vector 
+
+    v.pop_back();
+
+    // How to swap two vectors 
+    vector<int> v2;
+    v.push_back(12);
+    v.push_back(13);
+
+    v.swap(v2);
+
+    // How to erase the entire vector 
+
+    v.clear();
+
+    // How to check it the vector is empty or not
+
+    cout<<v.empty();
+
     for(auto it: v){
         cout<< it <<" " <<endl;
     } 
 }
+
+// 3. Lists 
+
+void explainList(){
+    // How to declair a list 
+    list<int> ls;
+
+    // pushback
+    ls.push_back(10);
+    // emplace back 
+    ls.emplace_back(20);
+    // push front 
+    ls.push_front(5);
+    // emplace front
+    ls.emplace_front(15);
+
+    for(auto it: ls){
+        cout<< it <<" " <<endl;
+    } 
+
+    // Rest function are same a vectors 
+    // begin , end , rebegin , rend , clear , insert , size , swap , empty.
+}
+
 int main(){
     // explainPairs();
-    explainVectors();
+    // explainVectors();
+    explainList();
 }
 
 
