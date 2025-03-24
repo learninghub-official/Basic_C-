@@ -218,6 +218,32 @@ void explainStack(){
     st.swap(st2);
 
 }
+
+// Write a explainfunction for queue.
+// Queue works on fifo operation which means first in first out.
+
+void explainQueue(){
+    // How to declair a queue
+    queue<int> q;
+    // Push
+    q.push(10);
+    q.push(20);
+    // Front
+    cout<< q.front() <<endl;
+    // Back
+    cout<< q.back() <<endl;
+    // Pop
+    q.pop();
+    // Empty
+    cout<< q.empty() <<endl;
+    queue<int> q2;
+    // Swap
+    q.swap(q2);
+}
+
+    
+
+
 int main(){
     // explainPairs();
     // explainVectors();
