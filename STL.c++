@@ -161,10 +161,69 @@ void explainList(){
     // begin , end , rebegin , rend , clear , insert , size , swap , empty.
 }
 
+// 3. Dequeue
+
+
+void explainDequeue(){
+    // How to declair a dequeue
+    deque<int> dq;
+
+    // Push 
+    dq.push_back(10);
+
+    // Emplace 
+    dq.emplace_back(20);
+    // Push front
+    dq.push_front(5);
+    // Emplace front
+    dq.emplace_front(15);
+    // Pop back
+    dq.pop_back();
+    // Pop front
+    dq.pop_front();
+
+    // back 
+    cout<< dq.back() <<endl;
+    // front
+    cout<< dq.front() <<endl;
+
+    // Rest function are same a vectors 
+    // begin , end , rebegin , rend , clear , insert , size , swap , empty.
+
+    for(auto it: dq){
+        cout<< it <<" " <<endl;
+    }
+}
+
+// 3. Stack 
+
+// Stack works on lifo operation "last in first out".
+
+void explainStack(){
+    // How to declair a stack
+    stack<int> st;
+    // Push
+    st.push(10);
+    // Emplace 
+    st.emplace(20);
+    // Top
+    cout<< st.top() <<endl;
+    // Pop
+    st.pop();
+    // Empty
+    cout<< st.empty() <<endl;
+    stack<int> st2;
+
+    // Swap 
+    st.swap(st2);
+
+}
 int main(){
     // explainPairs();
     // explainVectors();
-    explainList();
+    // explainList();
+    explainDequeue();
+
 }
 
 
