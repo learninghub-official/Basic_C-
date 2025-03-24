@@ -224,6 +224,8 @@ void explainStack(){
 
 void explainQueue(){
     // How to declair a queue
+
+    // Also known as Max heap 
     queue<int> q;
     // Push
     q.push(10);
@@ -240,11 +242,12 @@ void explainQueue(){
     // Swap
     q.swap(q2);
 
-    // minimum heap 
+    // Minimum heap 
+
     priority_queue<int ,vector<int>, greater<int>> pq;
-    pq.push(10);
     pq.push(20);
-    pq.push(30);
+    pq.push(10);
+    pq.push(50);
     pq.push(40);
 
     cout<< pq.top() <<endl;
