@@ -239,9 +239,40 @@ void explainQueue(){
     queue<int> q2;
     // Swap
     q.swap(q2);
+
+    // minimum heap 
+    priority_queue<int ,vector<int>, greater<int>> pq;
+    pq.push(10);
+    pq.push(20);
+    pq.push(30);
+    pq.push(40);
+
+    cout<< pq.top() <<endl;
 }
 
-    
+// Write a explain function for priority queue.
+// Priority queue works on priority operation which means highest priority first.
+// The data is not in linear fashion and stored as a tree. 
+
+void explainPriorQueue(){
+    // How to declair a priority queue
+    priority_queue<int> pq;
+    // Push
+    pq.push(10);
+    pq.push(20);
+    pq.push(5);
+    // Top
+    cout<< pq.top() <<endl;
+    // Pop
+    pq.pop();
+    // Empty
+    cout<< pq.empty() <<endl;
+    priority_queue<int> pq2;
+    // Swap
+    pq.swap(pq2);
+}
+
+
 
 
 int main(){
