@@ -1,3 +1,16 @@
+# For pushing entire folder
+
 git add .
+git commit -m "new thing added"
+git push origin main
+
+# For pushing a single file:
+
+git add filename.c++
+git commit -m "new thing added"
+git push origin main
+
+Example:
+git add Vectors.c++
 git commit -m "new thing added"
 git push origin main

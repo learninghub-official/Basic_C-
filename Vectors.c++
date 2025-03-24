@@ -37,7 +37,8 @@ void explainPairs(){
 void explainVectors() {
     // how to declare a vector
 
-    vector<int> v(5,100); // {100,100,100,100,100}
+    // vector<int> v(5,100); // {100,100,100,100,100}
+    vector<int> v;
     v.push_back(7);
     v.push_back(2);
     v.push_back(3);
@@ -45,14 +46,14 @@ void explainVectors() {
     v.push_back(6);
 
     vector<pair<int, int>> vp;
-    vp.emplace_back(1,2);
+    // vp.emplace_back(1,2);
 
-    vector<int> v1(5,20);
-    vector<int> v2(v1);
+    // vector<int> v1(5,20);
+    // vector<int> v2(v1);
 
     // how to iterate a vector
 
-    vector<int>::iterator it = v.begin();
+    // vector<int>::iterator it = v.begin();
     // it++;
     // cout << *(it) << " " <<endl;
     // it = it+2;
@@ -78,9 +79,24 @@ void explainVectors() {
 
     // how to erase elements from a vector
 
-    v.erase(v.begin() + 1);
+    // v.erase(v.begin() + 1);
 
-    v.erase(v.begin()+1 , v.begin()+3);
+    // v.erase(v.begin()+1 , v.begin()+3);
+
+    for(auto it: v){
+        cout<< it <<" " <<endl;
+    } 
+
+
+    // how to insert in the vector
+    cout<<"After Insertion in vector"<<endl;
+    v.insert(v.begin()+1,23);  // insertion for single element 
+    v.insert(v.begin()+1,2,45);  // insertion for multiple elements
+
+    // how to copy a vector and paste into another vector
+
+    vector<int> copy(2,20);
+    v.insert(v.begin(), copy.begin(), copy.end());
 
     for(auto it: v){
         cout<< it <<" " <<endl;
