@@ -11,6 +11,7 @@
 #include <list>
 #include <set>
 #include <unordered_set>
+#include <map>
 
 using namespace std;
 
@@ -356,10 +357,35 @@ void explainUnorderedSet(){
 
     // Rest function are same a Sets  
 
-
-
 }
 
+void explainMap(){
+    // A map is a container that stores elements in a key-value pair
+    // It is a sorted container
+    // It is also a tree based container
+    map<int, int> m;
+    // Insert
+    m.insert({1, 10});
+    m.insert({2, 20});
+    m.insert({3, 30});
+    // Find
+    cout<< m[1] <<endl;
+    // Lower bound
+    auto it = m.lower_bound(1);
+    cout<< (*it).first << " " << (*it).second <<endl;
+    // Upper bound
+    it = m.upper_bound(1);
+    cout<< (*it).first << " " << (*it).second <<endl;
+    // Erase
+    m.erase(1);
+    // Empty
+    cout<< m.empty() <<endl;
+    // Size
+    cout<< m.size() <<endl;
+    // Clear
+    m.clear();
+
+}
 int main(){
     // explainPairs();
     // explainVectors();
