@@ -1,6 +1,16 @@
+// STL (C++):
+// The Standard Template Library is a software library for the C++ programming language. 
+// It provides a set of generic algorithms, containers, functors, and iterators. 
+// The STL is designed to be efficient and flexible, allowing developers to work with various 
+// data structures and algorithms without having to implement them from scratch. 
+
+
+
 #include<iostream>
 #include <utility>
 #include <list>
+#include <set>
+#include <unordered_set>
 
 using namespace std;
 
@@ -276,14 +286,88 @@ void explainPriorQueue(){
     // Hello Nupur
 }
 
+// A Set stors unique values 
+// It stors the data in sorted manner
+// It does not allow duplicate values
+// It is not a linear container , A tree is maintained in this.
+
+void explainSet(){
+    // How to declair a set
+    set<int> s;
+    // Insert
+    s.insert(10);
+    s.insert(20);
+    s.insert(5);
+    // Find
+    cout<< (*s.find(10)) <<endl;
+    // Lower bound
+    auto it = s.lower_bound(10);
+    cout<< (*it) <<endl;
+    // Upper bound
+    it = s.upper_bound(10);
+    cout<< (*it) <<endl;
+    // Erase
+    s.erase(10);
+    // Empty
+    cout<< s.empty() <<endl;
+    // Size
+    cout<< s.size() <<endl;
+    // Clear
+    s.clear();
+}
+
+void explainMultiset(){
+    // A multiset is a container that allows duplicate values
+    // It is a set but it allows duplicate values
+    // It is also a sorted container
+    // It is also a tree based container
+    multiset<int> ms;
+    // Insert
+    ms.insert(10);
+    ms.insert(20);
+    ms.insert(5);
+    ms.insert(10);
+    ms.insert(10);
+    // Find
+    cout<< (*ms.find(10)) <<endl;
+    // Lower bound
+    auto it = ms.lower_bound(10);
+    cout<< (*it) <<endl;
+    // Upper bound
+    it = ms.upper_bound(10);
+    cout<< (*it) <<endl;
+    // Erase
+    ms.erase(10);
+
+    // ms.erase(ms.find(1), ms.find(1) + 2);
+    // Empty
+    cout<< ms.empty() <<endl;
+    // Size
+    cout<< ms.size() <<endl;
+    // Clear
+    ms.clear();
+}
+
+void explainUnorderedSet(){
+    // An unordered set is a container that does not allow duplicate values
+    // It is an unordered container
+    // It is also a hash based container
+    unordered_set<int> us;
+
+    // Rest function are same a Sets  
 
 
+
+}
 
 int main(){
     // explainPairs();
     // explainVectors();
     // explainList();
     explainDequeue();
+    explainSet();
+    explainMultiset();
+    explainUnorderedSet();
 
 }
 
