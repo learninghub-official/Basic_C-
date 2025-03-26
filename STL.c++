@@ -363,11 +363,13 @@ void explainMap(){
     // A map is a container that stores elements in a key-value pair
     // It is a sorted container
     // It is also a tree based container
-    map<int, int> m;
+    // It stors unique keys.
+
+    map<int, char> m;
     // Insert
-    m.insert({1, 10});
-    m.insert({2, 20});
-    m.insert({3, 30});
+    m.insert({1, 'M'});
+    m.insert({2, 'M'});
+    m.insert({3, 'N'});
     // Find
     cout<< m[1] <<endl;
     // Lower bound
@@ -386,7 +388,21 @@ void explainMap(){
     m.clear();
 
 }
+
+void explainMultiMap(){
+    // It can stors multiple keys.
+    // Only map[key] can not be used here 
+
+}
+
+void explainExtra(){
+    // Sorting 
+
+}
+
 int main(){
+
+
     // explainPairs();
     // explainVectors();
     // explainList();
