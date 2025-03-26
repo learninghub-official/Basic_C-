@@ -395,6 +395,23 @@ void print27(int n){
     }
 }
 
+void patternrev(int n){
+    for(int i = 0;i <= n; i++){
+        // for spaces
+        for(int j = 0; j < i; j++){  
+            cout<<" ";
+        }
+        for(int k =0; k< 2*n-(2*i+1);k++){
+            cout<<"*";
+        }
+        for(int j = 0; j < i; j++){  
+            cout<<" ";
+        }
+    cout<<endl;
+    }
+}
+
+
 int main(){
     int n;
     cin>>n;
@@ -424,7 +441,8 @@ int main(){
     // print24(n);
     // print25(n);
     // print26(n);
-    print27(n);
+    // print27(n);
+    patternrev(n);
 }
 
 
