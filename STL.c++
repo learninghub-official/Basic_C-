@@ -12,6 +12,7 @@
 #include <set>
 #include <unordered_set>
 #include <map>
+// #include <functional>      
 
 using namespace std;
 
@@ -397,6 +398,49 @@ void explainMultiMap(){
 
 void explainExtra(){
     // Sorting 
+    int arr[4] = {1,5,3,2};
+    // declare vector 
+    vector<int> v;
+    // emplace 
+    v.emplace_back(1);
+    v.emplace_back(5);
+    v.emplace_back(3);
+    v.emplace_back(2);
+
+    // sort(arr, arr+4);  // for full arr sorting
+    // sort(v.begin(),v.end())   // for vector sorting
+
+
+    // simple for loop
+    // for(int i=0;i<4;i++){
+    //     cout<< arr[i]<<endl;
+    // }
+
+    // Advance for loop 
+
+    // sort(arr+2,arr+4);   //for portion sorting here arr+4  point to the location after the last item. {1,3,5,2} -> after 2 it is pointing.
+
+    sort(arr, arr+4, greater <int>());   //for sorting in decending order
+
+
+    for(auto i : arr){
+        cout<< i <<" " <<endl;
+    } 
+
+    int num = 7;
+    int cnt = __builtin_popcount(num);
+
+    long long num1 = 9493935935345;
+    int cnt = __builtin_popcountll(num1);
+
+    string s = "123";
+    do{
+        cout<<s<<endl;
+    } while (next_permutation(s.begin(),s.end()));
+
+
+    int maxi = *max_element(arr,arr+4);
+    
 
 }
 
@@ -406,10 +450,11 @@ int main(){
     // explainPairs();
     // explainVectors();
     // explainList();
-    explainDequeue();
-    explainSet();
-    explainMultiset();
-    explainUnorderedSet();
+    // explainDequeue();
+    // explainSet();
+    // explainMultiset();
+    // explainUnorderedSet();
+    explainExtra();
 
 }
 
