@@ -48,26 +48,20 @@ void Count_digits(int n){
 
 // Given a positive integer n, count the number of digits in n that divide n 
 // evenly (i.e., without leaving a remainder). Return the total number of such digits.
-
 // A digit d of n divides n evenly if the remainder when n is divided by d is 0 (n % d == 0).
 // Digits of n should be checked individually. If a digit is 0, 
 // it should be ignored because division by 0 is undefined.
-
 // Input: n = 12
 // Output: 2
 // Explanation: 1, 2 when both divide 12 leaves remainder 0.
-
 // Input: n = 2446
 // Output: 1
 // Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
-
 // void Count_Digits1(int n){
 //     int count = 0;
-    
 //     while(n > 0){
 //         int lastdigit = n % 10;  // Extract last digit
 //         cout << "Last digit: " << lastdigit << endl;
-        
 //         // Mistake: Checking divisibility with the modified 'n' instead of the original number.
 //         // Once 'n' is modified in the loop, it does not represent the original number anymore.
 //         // Fix: Store the original number before the loop and use it for the divisibility check.
@@ -98,11 +92,66 @@ void Count_Digits1(int n) {
 
     cout << "Divisor Count: " << count << endl;
 }
+void Reverse_number(int n){
+    int final = 0;
+    while(n>0){          //7789
+        int lastdigit = n % 10;          // here lastdigit = 9
+        final = final * 10 + lastdigit;   // here final = 9
+        n /= 10;
+    }
+    cout<<final<<endl;
+    
+}
+void CheckPalindrom(int n){
+    int original = n;
+    int final = 0;
+    while(n>0){          //7789
+        int lastdigit = n % 10;          // here lastdigit = 9
+        final = final * 10 + lastdigit;   // here final = 9
+        n /= 10;
+    }
+    if (final == original){
+        cout<<"Number is Palindrome"<<endl;
+    }
+    else cout<<"Number is not Palindrome"<<endl;
+    // cout<<final<<endl;
+    
+}
+void Armstrong_Number(int n){
+    int original = n;
+    int sum = 0;
+    int lastdigit;
+    
+    // Count number of digits
+    int countDigits = 0, temp = n;
+    while (temp > 0) {
+        temp /= 10;
+        countDigits++;
+    }
 
+    // Compute sum of digits raised to the power of countDigits
+    temp = n; // Reset temp to original n
+    while (temp > 0) {
+        lastdigit = temp % 10;
+        sum += pow(lastdigit, countDigits);  // Corrected calculation
+        temp /= 10;
+    }
+
+    cout << "Total: " << sum << endl;
+
+    if (sum == original) {
+        cout << "Number is Armstrong" << endl;
+    } else {
+        cout << "Number is not Armstrong" << endl;
+    }
+}
 int main(){
     int n;
     cin>> n;
     // extractionOfDigits();
     // Count_digits(n);
-    Count_Digits1(n);
+    // Count_Digits1(n);
+    // Reverse_number(n);
+    // CheckPalindrom(n);
+    Armstrong_Number(n);
 }
