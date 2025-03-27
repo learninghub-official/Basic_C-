@@ -145,6 +145,9 @@ void Armstrong_Number(int n){
         cout << "Number is not Armstrong" << endl;
     }
 }
+
+
+
 int main(){
     int n;
     cin>> n;
