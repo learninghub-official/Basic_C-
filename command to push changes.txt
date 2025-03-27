@@ -4,6 +4,10 @@ git add .
 git commit -m "new thing added"
 git push origin main
 
+#or
+
+git push origin main
+
 # For pushing a single file:
 
 git add filename.c++
