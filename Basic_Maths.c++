@@ -29,13 +29,21 @@ void extractionOfDigits(){
 
 void Count_digits(int n){
     // only valid for 10 digit numbers 
-    int count = 0;
-    while(n>0){
-        int lastone = n%10;   
-        count++;
-        n = n/10;                      
-    }
+    // int count = 0;
+    // while(n>0){
+    //     // int lastone = n%10;   
+    //     count = count+1;
+    //     // count++;
+    //     n = n/10;                      
+    // }
+    // cout<<"Number of digits: "<<count<<endl;
+
+
+    // using log 
+
+    int count = int(log10(n)+1);
     cout<<"Number of digits: "<<count<<endl;
+
 }
 
 int main(){
