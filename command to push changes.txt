@@ -11,6 +11,6 @@ git commit -m "new thing added"
 git push origin main
 
 Example:
-git add STL.c++
+git add Basic_Maths.c++
 git commit -m "new thing added"
 git push origin main
