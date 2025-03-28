@@ -160,7 +160,7 @@ void Print_divisors_usingVectors(int n){
     for(int i =1; i<=sqrt(n);i++){
         if(n%i == 0){
             v.push_back(i);
-            if(n/i != i){
+            if((n/i) != i){         // This condition eleminate the repeatation of factors to be pushed.
                 v.push_back(n/i);
             }
             // cout<<i<<endl;
@@ -190,6 +190,26 @@ void Sum_Of_divisors(int n){
     cout<<"Sum = "<<sum<<endl;
 }
 
+void Prime_number(int n){
+    int original = n;
+    int count = 0;  
+    for(int i =1; i*i<=n; i++){             //running loop till Square root of n to reduce the time complexity. else we can loop till n , which is also fine.
+        if(n%i == 0){
+            count++;
+            if((n/i) != 0){                 // This condition eleminate the repeatation of factors to be pushed.
+                count++;
+            }
+        }
+    }
+    if (count == 2){
+        cout<<original<<" It is a prime number"<<endl;
+    }
+    else{
+        cout<<original<<" It is not a prime number"<<endl;
+    }
+    cout<<"Number of factors of "<<original<<" are "<<count<<endl;
+    
+}
 int main(){
     int n;
     cin>> n;
@@ -200,6 +220,7 @@ int main(){
     // CheckPalindrom(n);
     // Armstrong_Number(n);
     // Print_divisors(n);
-    Print_divisors_usingVectors(n);
+    // Print_divisors_usingVectors(n);
     // Sum_Of_divisors(n);
+    Prime_number(n);
 }
