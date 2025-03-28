@@ -210,6 +210,35 @@ void Prime_number(int n){
     cout<<"Number of factors of "<<original<<" are "<<count<<endl;
     
 }
+
+void HCF_GCD(int n){           // Highest common factor or Greatest common divisor
+    int a = n;
+    int b;
+    cin>>b;
+
+    // This is wrong, I am just testing my logic
+    // int big;
+    // if(n1>n2){
+    //     big = n1;
+    // }
+    // else big = n2;
+    // for (int i =1 ;i<=big; i++){
+    //     if(n1%i == 0 && n2%i == 0){
+    //         cout<<i;
+    //     }
+
+    // }
+
+    // Usign Euclidean Algorithm 
+
+    while(a>0 && b>0){
+        if(a>b) a = a%b;
+        else b = b%a;
+    }
+    if (a==0) cout<<b;
+    cout<<a;
+}
+
 int main(){
     int n;
     cin>> n;
@@ -222,5 +251,6 @@ int main(){
     // Print_divisors(n);
     // Print_divisors_usingVectors(n);
     // Sum_Of_divisors(n);
-    Prime_number(n);
+    // Prime_number(n);
+    HCF_GCD(n);
 }
