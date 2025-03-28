@@ -156,6 +156,7 @@ void Print_divisors(int n){
 
 void Print_divisors_usingVectors(int n){
     vector<int> v;
+    // for(int i =1; i*i<=n;i++){        //other way to loop till squareroot
     for(int i =1; i<=sqrt(n);i++){
         if(n%i == 0){
             v.push_back(i);
