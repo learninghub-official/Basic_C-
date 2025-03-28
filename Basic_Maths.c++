@@ -146,7 +146,48 @@ void Armstrong_Number(int n){
     }
 }
 
+void Print_divisors(int n){
+    for(int i =1; i<=n;i++){
+        if(n%i == 0){
+            cout<<i<<endl;
+        }
+    }
+}
 
+void Print_divisors_usingVectors(int n){
+    vector<int> v;
+    for(int i =1; i<=sqrt(n);i++){
+        if(n%i == 0){
+            v.push_back(i);
+            if(n/i != i){
+                v.push_back(n/i);
+            }
+            // cout<<i<<endl;
+        }
+    }
+    sort(v.begin(),v.end());
+    for(auto it : v){
+        cout<<it<<" ";
+    }
+}
+
+void Sum_Of_divisors(int n){
+    int sum = 0;
+    int final_sum = 0;
+    for(int i = 1; i<=n;i++){
+        // cout<<i;
+        for(int j =1; j<= n ; j++){
+            if(i%j == 0){
+                // cout<<"i = "<<i<<endl;
+                // cout<<"j = "<<j<<endl;
+                sum = sum+j;
+                
+            }
+        cout<<"Current sum = "<<sum<<endl;
+        }
+    }
+    cout<<"Sum = "<<sum<<endl;
+}
 
 int main(){
     int n;
@@ -156,5 +197,8 @@ int main(){
     // Count_Digits1(n);
     // Reverse_number(n);
     // CheckPalindrom(n);
-    Armstrong_Number(n);
+    // Armstrong_Number(n);
+    // Print_divisors(n);
+    Print_divisors_usingVectors(n);
+    // Sum_Of_divisors(n);
 }
