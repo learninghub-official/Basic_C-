@@ -63,6 +63,15 @@ void print_name(int n){
 //     return n*n*n + sumOfSeries(n-1);
 // }
 
+void PrintFactorial_till_n(int n, int fact = 1) { // Default `fact` value is set to 1
+    if (n == 0) { // Base case: when `n` becomes 0
+        cout << fact << endl; // Print the computed factorial value
+        return; // Exit the function
+    }
+
+    PrintFactorial(n - 1, fact * n); // Recursive call with `n-1` and updated factorial value
+}
+
 int main() {
     int n;
     cin >> n; // Take input from the user
@@ -75,7 +84,8 @@ int main() {
     // PrintSum(n, 0); // Print sum of numbers from 1 to `n`
     // PrintFactorial(n); // Print factorial of `n`
     // sumOfSeries(n)
-    print_name(n);
+    // print_name(n);
+    PrintFactorial_till_n(n);
 
     return 0; // Return 0 indicating successful program execution
 }
