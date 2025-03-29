@@ -48,6 +48,21 @@ void PrintFactorial(int n, int fact = 1) { // Default `fact` value is set to 1
     PrintFactorial(n - 1, fact * n); // Recursive call with `n-1` and updated factorial value
 }
 
+void print_name(int n){
+    if(n==0){
+        return ;
+    }
+    print_name(n-1);
+    cout<<"GFG ";
+}
+
+// int sumOfSeries(int n) {           //Given an integer n, calculate the sum of series 13 + 23 + 33 + 43 + … till n-th term.
+//     if(n==0){
+//         return 0;
+//     }
+//     return n*n*n + sumOfSeries(n-1);
+// }
+
 int main() {
     int n;
     cin >> n; // Take input from the user
@@ -58,7 +73,9 @@ int main() {
     // printcounting(1, n); // Print numbers from 1 to `n`
     // printreversedcounting(n, 0); // Print numbers from `n` to 1
     // PrintSum(n, 0); // Print sum of numbers from 1 to `n`
-    PrintFactorial(n); // Print factorial of `n`
+    // PrintFactorial(n); // Print factorial of `n`
+    // sumOfSeries(n)
+    print_name(n);
 
     return 0; // Return 0 indicating successful program execution
 }
