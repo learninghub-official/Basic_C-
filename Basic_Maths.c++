@@ -240,6 +240,7 @@ void HCF_GCD(int n){           // Highest common factor or Greatest common divis
 }
 
 void reverse_array(int n , int arr[] , int i){
+    // This one pointer method is exceeding time limit, use 2 pointer instead.
     if (i >= n/2){
         return;
     }
