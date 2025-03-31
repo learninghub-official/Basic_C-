@@ -315,9 +315,23 @@ int Fabonaaci(int n){
     return last + slast;
 }
 
+void checkPalindromPhrase(string s){
+    for(auto &ch : s){
+        ch = tolower(ch);
+    }
+    // if(auto &ch == isalpha(ch))
+    cout<<s;
+}
+
+
+void InputOutput_checkPalindromPhrase(){
+    string s ;
+    getline(cin,s);
+    checkPalindromPhrase(s);
+}
 int main(){
-    int n;
-    cin>> n;
+    // int n;
+    // cin>> n;
     // extractionOfDigits();
     // Count_digits(n);
     // Count_Digits1(n);
@@ -331,7 +345,8 @@ int main(){
     // HCF_GCD(n);
     // InputAndOutput_for_reverse_array(n);
     // InputandOutput_for_CheckPalindrom();
-    cout<< Fabonaaci(n);
+    // cout<< Fabonaaci(n);
+    InputOutput_checkPalindromPhrase();
     return 0;
 
 }
