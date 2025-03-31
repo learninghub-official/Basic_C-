@@ -246,7 +246,17 @@ void reverse_array(int n , int arr[] , int i){
     swap(arr[i],arr[n-i-1]);
     reverse_array(i+1,arr,n);
 }
-
+void InputAndOutput_for_reverse_array(int n){
+    int arr[n];
+    int i;
+    for (i = 0 ; i<n ; i++){
+        cin>>arr[i];
+    }
+    reverse_array(n,arr,0);
+    for (i = 0 ; i<n ; i++){
+        cout<<arr[i]<<" ";
+    }
+}
 int main(){
     int n;
     cin>> n;
@@ -261,15 +271,16 @@ int main(){
     // Sum_Of_divisors(n);
     // Prime_number(n);
     // HCF_GCD(n);
-    int arr[n];
-    int i;
-    for (i = 0 ; i<n ; i++){
-        cin>>arr[i];
-    }
-    reverse_array(n,arr,0);
-    for (i = 0 ; i<n ; i++){
-        cout<<arr[i]<<" ";
-    }
+    // int arr[n];
+    // int i;
+    // for (i = 0 ; i<n ; i++){
+    //     cin>>arr[i];
+    // }
+    // reverse_array(n,arr,0);
+    // for (i = 0 ; i<n ; i++){
+    //     cout<<arr[i]<<" ";
+    // }
+    InputAndOutput_for_reverse_array(n);
     return 0;
 
 }
