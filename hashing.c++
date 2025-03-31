@@ -13,7 +13,8 @@
 
 #include<iostream>
 using namespace std;
-
+// We can go only till hash size of 10^7 inside the main 
+// int hashh[10000000];
 int main(){
     int n;
     cout<<"Enter the size of Array"<<endl;
@@ -25,12 +26,12 @@ int main(){
         cin>>arr[i];  // Input array elements
     }
 
-    //  **Pre-Computing using Hashing**
-    int hash[13] = {0};  // Initialize a hash array with size 13 (Assuming max value in arr ≤ 12)
-    
+    //  **Pre-Computing using Hashing**  // We can go only till hash size of 10^6 inside the main 
+    int hashh[13] = {0};  // Initialize a hash array with size 13 (Assuming max value in arr ≤ 12) 
+    // int hash[1000000] = {0};
     // **Building the Hash Table** (Frequency Array)
     for(int i = 0 ; i<n ; i++){
-        hash[arr[i]] += 1;  // Increase the count of the element in the hash table
+        hashh[arr[i]] += 1;  // Increase the count of the element in the hash table
     }
 
     int q;  
@@ -42,7 +43,7 @@ int main(){
         cin>>number;  // Input the number to check its frequency
         
         // **Fetching from the Hash Table** (O(1) Time Complexity)
-        cout<<"Count of number \n"<<hash[number]<<endl;  // Output frequency of 'number'
+        cout<<"Count of number \n"<<hashh[number]<<endl;  // Output frequency of 'number'
     }
 
     return 0;
