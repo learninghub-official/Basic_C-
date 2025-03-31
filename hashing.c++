@@ -11,6 +11,26 @@
 
 // The answer is fetched in O(1) time using hash[number].
 
+/*
+Problem Statement: Counting Frequency Using Hashing
+Description:
+You are given an array of N integers where each element is in the range 0 to 12. Your task is to count the frequency of each element using hashing and efficiently answer multiple queries asking for the count of specific numbers.
+
+Input Format:
+An integer N – the size of the array.
+
+N space-separated integers – the elements of the array.
+
+An integer Q – the number of queries.
+
+Q space-separated integers – each representing a number whose frequency needs to be found.
+
+Output Format:
+For each query, print the frequency of the given number in the array.
+
+*/
+
+
 #include<iostream>
 using namespace std;
 // We can go only till hash size of 10^7 inside the main 
