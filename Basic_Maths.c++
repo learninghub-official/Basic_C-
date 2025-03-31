@@ -308,9 +308,16 @@ void InputandOutput_for_CheckPalindrom() {
         cout << "False" << endl;
 }
 
+int Fabonaaci(int n){
+    if(n<=1) return n;
+    int last = Fabonaaci(n-1);
+    int slast = Fabonaaci(n-2);
+    return last + slast;
+}
+
 int main(){
-    // int n;
-    // cin>> n;
+    int n;
+    cin>> n;
     // extractionOfDigits();
     // Count_digits(n);
     // Count_Digits1(n);
@@ -323,7 +330,8 @@ int main(){
     // Prime_number(n);
     // HCF_GCD(n);
     // InputAndOutput_for_reverse_array(n);
-    InputandOutput_for_CheckPalindrom();
+    // InputandOutput_for_CheckPalindrom();
+    cout<< Fabonaaci(n);
     return 0;
 
 }
