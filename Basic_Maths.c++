@@ -1,4 +1,6 @@
 #include<iostream>
+#include <cctype>  // For tolower() and isalpha()
+#include <algorithm> // For reverse()
 using namespace std;
 
 void extractionOfDigits(){
@@ -316,11 +318,20 @@ int Fabonaaci(int n){
 }
 
 void checkPalindromPhrase(string s){
-    for(auto &ch : s){
-        ch = tolower(ch);
+    string progresses_string = "";
+    for (char ch : s) {
+        if (isalpha(ch)) {
+            progresses_string += tolower(ch);
+        }
     }
-    // if(auto &ch == isalpha(ch))
-    cout<<s;
+
+    string reversed_str = progresses_string;
+    cout<<progresses_string;
+    reverse(reversed_str.begin(),reversed_str.end());
+    if(progresses_string == reversed_str){
+        cout<<"It is a palindrome"<<endl;
+    }
+    else cout<<"It is not a palindrome"<<endl;
 }
 
 
