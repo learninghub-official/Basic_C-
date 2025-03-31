@@ -18,3 +18,8 @@ Example:
 git add recursion.c++
 git commit -m "new thing added"
 git push origin main
+
+
+Try : if Your local branch and remote branch have different commits; pull and rebase or merge before pushing. 
+
+git pull --rebase origin main
