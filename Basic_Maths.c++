@@ -258,9 +258,59 @@ void InputAndOutput_for_reverse_array(int n){
         cout<<arr[i]<<" ";
     }
 }
+// Wrong approach 
+// void CheckPalindrom(string str , int i ,int n) {  
+//     if(i >= n/2) { 
+//         return;  
+//     }
+
+//     swap(str[i], str[n - i - 1]);  // ❌ Mistake 1: Swapping changes the string instead of checking palindrome.
+
+//     CheckPalindrom(str, i + 1, n); // ❌ Mistake 2: `str` is passed by value, so changes do NOT affect the original string.
+// }
+
+// void InputandOutput_for_CheckPalindrom() {
+//     string str;
+//     cin >> str;
+//     int n = str.size();
+    
+//     CheckPalindrom(str, 0, n); // ❌ Mistake 3: Function modifies a copy of `str`, but original `str` remains unchanged.
+
+//     for(int i = 0; i < n; i++) {
+//         cout << str[i]; // ❌ Mistake 4: This prints `str`, but since `str` was not modified, it outputs the original input.
+//     }
+
+//     string finalstr;
+//     finalstr = str; // ❌ Mistake 5: `finalstr` is just a copy of `str`, which is unchanged.
+    
+//     if(finalstr == str) // ❌ Mistake 6: This comparison is meaningless because `str` was never reversed in the original variable.
+//         cout << "True" << endl;
+//     else 
+//         cout << "False" << endl;
+// }
+
+bool CheckPalindrom(string &str, int i, int n) {  
+    if (i >= n / 2) return true; // ✅ Base case: If we reach the middle, it's a palindrome.
+
+    if (str[i] != str[n - i - 1]) return false; // ✅ Correctly checking if characters match.
+
+    return CheckPalindrom(str, i + 1, n); // ✅ Recursive call without modifying `str`.
+}
+
+void InputandOutput_for_CheckPalindrom() {
+    string str;
+    cin >> str;
+    int n = str.size();
+    
+    if (CheckPalindrom(str, 0, n)) 
+        cout << "True" << endl;
+    else 
+        cout << "False" << endl;
+}
+
 int main(){
-    int n;
-    cin>> n;
+    // int n;
+    // cin>> n;
     // extractionOfDigits();
     // Count_digits(n);
     // Count_Digits1(n);
@@ -272,7 +322,8 @@ int main(){
     // Sum_Of_divisors(n);
     // Prime_number(n);
     // HCF_GCD(n);
-    InputAndOutput_for_reverse_array(n);
+    // InputAndOutput_for_reverse_array(n);
+    InputandOutput_for_CheckPalindrom();
     return 0;
 
 }
