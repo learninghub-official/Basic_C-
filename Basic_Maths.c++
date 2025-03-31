@@ -271,15 +271,6 @@ int main(){
     // Sum_Of_divisors(n);
     // Prime_number(n);
     // HCF_GCD(n);
-    // int arr[n];
-    // int i;
-    // for (i = 0 ; i<n ; i++){
-    //     cin>>arr[i];
-    // }
-    // reverse_array(n,arr,0);
-    // for (i = 0 ; i<n ; i++){
-    //     cout<<arr[i]<<" ";
-    // }
     InputAndOutput_for_reverse_array(n);
     return 0;
 
