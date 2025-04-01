@@ -33,6 +33,7 @@ int main(){
 }
 
 
+// The time Complexity is (log n) in all case , worst , best and average. 
 
 
 
