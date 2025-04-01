@@ -9,7 +9,7 @@ int main(){
     // Pre-computing
     int hash[26] = {0};
     for(int i=0 ; i<s.size(); i++){
-        hash[s[i] - 'a']++;      // if the question is said like we have only small letters , else there is no need to substract from 'a'.
+        hash[s[i] - 'a']++;      // This is because if the question is said like we have only small letters , else there is no need to substract from 'a'.
     }
 
     int q;
