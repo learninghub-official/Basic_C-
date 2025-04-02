@@ -31,43 +31,43 @@ For each query, print the frequency of the given number in the array.
 */
 
 
-#include<iostream>
-using namespace std;
-// We can go only till hash size of 10^7 inside the main 
-// int hashh[10000000];
-int main(){
-    int n;
-    cout<<"Enter the size of Array"<<endl;
-    cin >> n;
-    int arr[n];  // Declare an array to store 'n' elements
+// #include<iostream>
+// using namespace std;
+// // We can go only till hash size of 10^7 inside the main 
+// // int hashh[10000000];
+// int main(){
+//     int n;
+//     cout<<"Enter the size of Array"<<endl;
+//     cin >> n;
+//     int arr[n];  // Declare an array to store 'n' elements
 
-    cout<<"Enter Array: "<<endl;
-    for(int i = 0 ; i<n ; i++){
-        cin>>arr[i];  // Input array elements
-    }
+//     cout<<"Enter Array: "<<endl;
+//     for(int i = 0 ; i<n ; i++){
+//         cin>>arr[i];  // Input array elements
+//     }
 
-    //  **Pre-Computing using Hashing**  // We can go only till hash size of 10^6 inside the main 
-    int hashh[13] = {0};  // Initialize a hash array with size 13 (Assuming max value in arr ≤ 12) 
-    // int hash[1000000] = {0};
-    // **Building the Hash Table** (Frequency Array)
-    for(int i = 0 ; i<n ; i++){
-        hashh[arr[i]] += 1;  // Increase the count of the element in the hash table
-    }
+//     //  **Pre-Computing using Hashing**  // We can go only till hash size of 10^6 inside the main 
+//     int hashh[13] = {0};  // Initialize a hash array with size 13 (Assuming max value in arr ≤ 12) 
+//     // int hash[1000000] = {0};
+//     // **Building the Hash Table** (Frequency Array)
+//     for(int i = 0 ; i<n ; i++){
+//         hashh[arr[i]] += 1;  // Increase the count of the element in the hash table
+//     }
 
-    int q;  
-    cin>>q;  // Input number of queries
+//     int q;  
+//     cin>>q;  // Input number of queries
     
-    while(q--){
-        int number;
-        cout<<"Enter number of numbers: "<<endl;
-        cin>>number;  // Input the number to check its frequency
+//     while(q--){
+//         int number;
+//         cout<<"Enter number of numbers: "<<endl;
+//         cin>>number;  // Input the number to check its frequency
         
-        // **Fetching from the Hash Table** (O(1) Time Complexity)
-        cout<<"Count of number \n"<<hashh[number]<<endl;  // Output frequency of 'number'
-    }
+//         // **Fetching from the Hash Table** (O(1) Time Complexity)
+//         cout<<"Count of number \n"<<hashh[number]<<endl;  // Output frequency of 'number'
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 // Input: 
@@ -111,3 +111,71 @@ int main(){
 //     }
 //     return 0;
 // }
+
+
+
+
+// Frequencies in a Limited Array
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int n;
+//     cout<<"Enter size of array"<<endl;
+//     cin>>n;
+//     int arr[n];
+//     cout<<"Enter the array"<<endl;
+//     for(int i = 0 ; i<n ; i++){
+//         cin>>arr[i];
+//     }
+
+//     int hashh[n] ;
+//     for(int i = 0 ; i<n ; i++){
+//         hashh[i] = 0;
+//         hashh[arr[i]++];
+//     }
+    
+//     for(int i = 0 ; i<n ; i++){
+//         cout<<"Count of Element:"<<hashh[i];
+//     }
+
+
+//     return 0;
+// }
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+    int n;
+    cout << "Enter size of array: ";
+    cin >> n;
+
+    vector<int> arr(n);  // Dynamic array
+    cout << "Enter the array elements: ";
+    for(int i = 0; i < n; i++){
+        cin >> arr[i];
+    }
+
+    // int maxElement = *max_element(arr.begin(), arr.end());  // Get the max element
+    vector<int> hashh(n + 1, 0);  // Hash array with size based on max element
+
+    // Count occurrences
+    for(int i = 0; i < n; i++){
+        hashh[arr[i]]++;  
+    }
+
+    // Print frequency of each element
+    cout << "Element frequencies:\n";
+    for(int i = 0; i <= n; i++){
+        if(hashh[i] > 0)
+            cout << "Element " << i << " appears " << hashh[i] << " times.\n";
+    }
+
+    return 0;
+}
