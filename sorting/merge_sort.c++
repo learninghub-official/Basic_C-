@@ -1,3 +1,9 @@
+// This version of Merge Sort uses recursion to divide the array into smaller parts.
+
+// The merge() function then merges the sorted subarrays step-by-step.
+
+// It's an efficient O(n log n) sorting algorithm, suitable for large datasets.
+
 #include <iostream>
 #include <vector>
 using namespace std;
