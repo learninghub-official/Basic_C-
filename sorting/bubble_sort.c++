@@ -1,3 +1,8 @@
+// Quick Reminder:
+// Bubble Sort compares adjacent elements and bubbles up the largest element to the end in each pass.
+
+// The ok flag helps optimize the sort by stopping early if the array is already sorted.
+
 #include<iostream>
 using namespace std;
 
