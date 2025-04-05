@@ -1,3 +1,8 @@
+// Quick Explanation:
+// Selection Sort repeatedly selects the smallest element from the unsorted portion of the array and places it at the beginning.
+
+// Time Complexity: O(n²) — works well for small datasets but not recommended for large ones.
+
 #include<iostream>
 using namespace std;
 
@@ -93,3 +98,8 @@ Enter the array :
 //         cout << arr[i] << " ";
 //     }
 // }
+
+// Quick Explanation:
+// Selection Sort repeatedly selects the smallest element from the unsorted portion of the array and places it at the beginning.
+
+// Time Complexity: O(n²) — works well for small datasets but not recommended for large ones.
