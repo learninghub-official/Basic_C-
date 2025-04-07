@@ -19,8 +19,6 @@ void pushZerosToEnd(vector<int>& arr) {
     }
 }
 
-// #hello
-
 void tozero(vector<int> &arr){
     sort(arr.begin(), arr.end(), greater<int>());
     for(auto it: arr){
