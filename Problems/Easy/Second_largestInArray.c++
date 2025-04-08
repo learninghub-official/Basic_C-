@@ -24,23 +24,38 @@ void SecondLargest(int arr[], int n){
     cout<<"Second Largest: "<<Slargest<<endl;
 }
 
-// Better solution 
+// Better solution  O(2n)
 void SecondLargestBetter(int arr[], int n){
 
-    int largest = arr[0];
+    int largest = arr[0];            
     // int n = arr.size();
-    for(int i = 0 ; i < n ;i++){
+    for(int i = 0 ; i < n ;i++){        // O(n)
         if(arr[i]>largest){
             largest = arr[i];
         }
     }
     int Slargest = -1;
-    for(int i = 0;i<n ;i++){
+    for(int i = 0;i<n ;i++){                // O(n)
         if(arr[i]>Slargest && arr[i] != largest){
             Slargest = arr[i];
         }
     }
-    cout<<"Second Largest: "<<Slargest<<endl;
+    cout<<"Second Largest: "<<Slargest<<endl;  
+}
+
+void SecondLargestOptimised(int arr[], int n){
+    int largest = arr[0];
+    int sLargest = -1;
+    for(int i = 1; i<n ;i++){
+        if(arr[i]>largest){
+            sLargest = largest;
+            largest = arr[i];
+        }
+        else if(arr[i]<largest && arr[i>sLargest]){
+            sLargest = arr[i];
+        }
+    }
+    cout<<"Second Largest: "<<sLargest<<endl;  
 }
 
 int main(){
@@ -51,7 +66,8 @@ int main(){
         cin>>arr[i];
     }
     // SecondLargest( arr, n);
-    SecondLargestBetter( arr, n);
+    // SecondLargestBetter( arr, n);
+    SecondLargestOptimised( arr, n);
 } 
 
 
