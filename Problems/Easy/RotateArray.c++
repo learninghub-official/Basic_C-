@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+// this problem does not required any bruteforce or better approach so 
+// here is the optimized approach.
+
 void RotateByOne(int arr[] , int n){
     int temp = arr[0];
     for(int i = 0; i<n ;i++){
