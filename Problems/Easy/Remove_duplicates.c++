@@ -3,7 +3,7 @@
 using namespace std;
 
 
-// bruteforce 
+// bruteforce approach
 void removeDuplicates(int arr[], int n){
     set<int> temp;
     for(int i = 0; i<n ;i++){
@@ -14,7 +14,7 @@ void removeDuplicates(int arr[], int n){
     }
 }
 
-// optimised 
+// optimised approach
 
 void removeDuplicatedOptimised (int arr[], int n){
     int i  = 0;
