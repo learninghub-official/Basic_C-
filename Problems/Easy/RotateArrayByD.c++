@@ -3,7 +3,7 @@ using namespace std;
 
 // this problem does not required any bruteforce or better approach so 
 // here is the optimized approach.
-
+// Left rotation 
 void RotateByD(int arr[], int n, int d) {
     d = d % n;
     int* temp = new int[d]; // use dynamic array instead of VLA
