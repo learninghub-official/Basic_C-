@@ -41,3 +41,15 @@ int main() {
     delete[] arr;
     return 0;
 }
+
+
+/*
+
+Input:
+7 3
+1 2 3 4 5 6 7
+
+Output:
+4 5 6 7 1 2 3
+
+*/
