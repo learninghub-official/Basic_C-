@@ -3,7 +3,7 @@
 using namespace std;
 
 
-// briteforce 
+// bruteforce 
 void removeDuplicates(int arr[], int n){
     set<int> temp;
     for(int i = 0; i<n ;i++){
