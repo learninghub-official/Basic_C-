@@ -14,6 +14,20 @@ void removeDuplicates(int arr[], int n){
     }
 }
 
+// optimised 
+
+void removeDuplicatedOptimised (int arr[], int n){
+    int i  = 0;
+    int j ;
+    for(j = 1;j<n;j++){
+        if(arr[i] != arr[j]){
+            arr[i+1] = arr[j];
+            i++;
+        }
+    }
+    cout<<i+1<<endl;
+}
+
 int main(){
     int n;
     cin>>n;
@@ -22,7 +36,9 @@ int main(){
         cin>>arr[i];
     }
 
-    removeDuplicates( arr, n);
+    // removeDuplicates( arr, n);
+    removeDuplicatedOptimised( arr, n);
+    
     // return 0;
 } 
 
