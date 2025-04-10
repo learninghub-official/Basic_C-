@@ -23,6 +23,15 @@ void RotateByD(int arr[], int n, int d) {
     delete[] temp; // free memory
 }
 
+// or
+
+void RotateByDReversemethod(int arr[], int n, int d){
+    reverse(arr, arr+d);
+    reverse(arr+d, arr+n);
+    reverse(arr, arr+n);
+}
+
+
 int main() {
     int n, d;
     cin >> n >> d;
@@ -32,7 +41,8 @@ int main() {
         cin >> arr[i];
     }
 
-    RotateByD(arr, n, d);
+    // RotateByD(arr, n, d);
+    RotateByDReversemethod(arr, n, d);
 
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
