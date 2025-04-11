@@ -24,10 +24,7 @@ void UnionOf2ArraysOptimized(int arr1[],int arr2[], int n1 , int n2 ){
     for(int i =0;i<n1;i++){
         temp.insert(arr1[i]);
     }
-    
-    for(int i =0;i<n2;i++){
-        temp.insert(arr2[i]);
-    }
+
 
 
 }
