@@ -29,10 +29,6 @@ void UnionOf2ArraysOptimized(int arr1[],int arr2[], int n1 , int n2 ){
         temp.insert(arr2[i]);
     }
 
-    for(auto it:temp){
-        cout<<it<<" ";
-    }
-    
 
 }
 
