@@ -19,10 +19,10 @@ void UnionOf2Arrays(int arr1[],int arr2[], int n1 , int n2 ){
 
 }
 
-void UnionOf2ArraysOptimized(int arr1[],int arr2[], int n1 , int n2 ){
+// void UnionOf2ArraysOptimized(int arr1[],int arr2[], int n1 , int n2 ){
 
 
-}
+// }
 
 int main() {
     cout<<"Provide size of Array: "<<endl;
