@@ -4,41 +4,12 @@ using namespace std;
 
 
 void IntersectionBrute(int arr1[],int arr2[], int n1 , int n2 ){
-    int i = 0;
-    int j = 0;
-    vector<int> Unionarray;
-    while(i<n1 && j<n2){
-        if(arr1[i] < arr2[j]){
-            if (Unionarray.size() == 0 || Unionarray.back() != arr1[i]){
-                Unionarray.push_back(arr1[i]);
-            }
-            i++;
-        }
-        else{
-            if (Unionarray.size() == 0 || Unionarray.back() != arr2[j]){
-                Unionarray.push_back(arr2[j]);
-            }
-            j++;
-        }
-    }
 
-    while(j<n2){
-        if (Unionarray.size() == 0 || Unionarray.back() != arr2[j]){
-            Unionarray.push_back(arr2[j]);
-        }
-        j++;
-    }
-    while(i<n2){
-        if (Unionarray.size() == 0 || Unionarray.back() != arr1[i]){
-            Unionarray.push_back(arr1[i]);
-        }
-        i++;
-    }
-
+    
     // return Unionarray;
-    for(auto it: Unionarray){
-        cout<<Unionarray[it]<<" ";
-    }
+    // for(auto it: Unionarray){
+    //     cout<<Unionarray[it]<<" ";
+    // }
 
 }
 
