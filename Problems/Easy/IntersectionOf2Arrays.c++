@@ -2,26 +2,8 @@
 #include <set>
 using namespace std;
 
-// Brute force approach 
-void UnionOf2Arrays(int arr1[],int arr2[], int n1 , int n2 ){
-    set<int> temp;
-    for(int i =0;i<n1;i++){
-        temp.insert(arr1[i]);
-    }
-    
-    for(int i =0;i<n2;i++){
-        temp.insert(arr2[i]);
-    }
 
-    for(auto it:temp){
-        cout<<it<<" ";
-    }
-    
-
-}
-
-// Optimized approach 
-void UnionOf2ArraysOptimized(int arr1[],int arr2[], int n1 , int n2 ){
+void IntersectionBrute(int arr1[],int arr2[], int n1 , int n2 ){
     int i = 0;
     int j = 0;
     vector<int> Unionarray;
@@ -80,7 +62,7 @@ int main() {
 
 
     // ZeroToEnd(arr, n);
-    UnionOf2Arrays(arr1,arr2, n1, n2);
+    IntersectionBrute(arr1,arr2, n1, n2);
 
 
     return 0;
