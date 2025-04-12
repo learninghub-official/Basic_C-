@@ -3,25 +3,32 @@
 using namespace std;
 
 
-void IntersectionBrute(int arr1[],int arr2[], int n1 , int n2 ){
-
+void IntersectionBrute(int arr1[], int arr2[], int n1, int n2) {
     vector<int> Ans;
-    vector<int> visArray = {0};
-    for(int i = 0 ; i < n1 ; i++){
-        for(int j = 0 ; j < n2 ; j++){
-            if(arr1[i] == arr2[j] && visArray[j] == 0){
+    vector<int> visArray(n2, 0); // Correctly create a vector of size n2 with all 0s
+    
+    // vector<int> visArray = {0};         //This creates a vector with only one element, initialized to 0.
+                                           // So when your code tries to access visArray[j] for j > 0, it will 
+                                        //    cause undefined behavior or a crash.So when your code tries to access 
+                                        //    visArray[j] for j > 0, it will cause undefined behavior or a crash.
+
+    for(int i = 0 ; i < n1 ; i++) {
+        for(int j = 0 ; j < n2 ; j++) {
+            if(arr1[i] == arr2[j] && visArray[j] == 0) {
                 Ans.push_back(arr1[i]);
                 visArray[j] = 1;
                 break;
             }
-            if(arr2[j]>arr1[i]) break;
+            if(arr2[j] > arr1[i]) break; // only valid if arrays are sorted
         }
     }
-    for(auto it: Ans){
-        cout<<it<<" ";
+
+    for(auto it : Ans) {
+        cout << it << " ";
     }
- 
+    cout << endl;
 }
+
 
 int main() {
     cout<<"Provide size of Array: "<<endl;
