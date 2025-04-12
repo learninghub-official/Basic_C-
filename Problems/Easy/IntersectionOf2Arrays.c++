@@ -6,7 +6,7 @@ using namespace std;
 void IntersectionBrute(int arr1[], int arr2[], int n1, int n2) {
     vector<int> Ans;
     vector<int> visArray(n2, 0); // Correctly create a vector of size n2 with all 0s
-    
+
     // vector<int> visArray = {0};         //This creates a vector with only one element, initialized to 0.
                                            // So when your code tries to access visArray[j] for j > 0, it will 
                                         //    cause undefined behavior or a crash.So when your code tries to access 
@@ -29,7 +29,43 @@ void IntersectionBrute(int arr1[], int arr2[], int n1, int n2) {
     cout << endl;
 }
 
+void IntersectionOptimized(int arr1[], int arr2[], int n1, int n2){
+    int i = 0;
+    int j = 0;
+    vector<int> Ans;
+    while (i<n1 && j<n2)
+    {
+        // if(arr1[i] == arr2[j]){
+        //     Ans.push_back(arr1[i]);
+        //     i++;
+        //     j++;
+        // }
+        // else{
+        //     i++;        i = 1 → arr1[1] = 2, arr2[1] = 4 → not equal
+        //     j++;         // You again do i++ and j++ → i = 2, j = 2
+                            // 🚨 Now you skipped checking arr2[0] (2) when arr1[1] was 2
+                            // You’ve missed the intersection value 2
+        // }
 
+
+        if(arr1[i] < arr2[j]){
+            i++;
+        }
+        else if(arr2[j] < arr1[i]){
+            j++;
+        }
+        else{
+            Ans.push_back(arr1[i]);
+            i++;
+            j++;
+        }
+    }
+    for(auto it : Ans) {
+        cout << it << " ";
+    }
+    cout << endl;
+    
+}
 int main() {
     cout<<"Provide size of Array: "<<endl;
     int n1,n2;
@@ -50,7 +86,8 @@ int main() {
 
 
     // ZeroToEnd(arr, n);
-    IntersectionBrute(arr1,arr2, n1, n2);
+    // IntersectionBrute(arr1,arr2, n1, n2);
+    IntersectionOptimized(arr1,arr2, n1, n2);
 
 
     return 0;
