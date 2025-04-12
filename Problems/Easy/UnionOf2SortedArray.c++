@@ -26,7 +26,7 @@ void UnionOf2ArraysOptimized(int arr1[],int arr2[], int n1 , int n2 ){
     int j = 0;
     vector<int> Unionarray;
     while(i<n1 && j<n2){
-        if(arr1[i] < arr2[j]){
+        if(arr1[i] <= arr2[j]){
             if (Unionarray.size() == 0 || Unionarray.back() != arr1[i]){
                 Unionarray.push_back(arr1[i]);
             }
@@ -80,7 +80,8 @@ int main() {
 
 
     // ZeroToEnd(arr, n);
-    UnionOf2Arrays(arr1,arr2, n1, n2);
+    // UnionOf2Arrays(arr1,arr2, n1, n2);
+    UnionOf2ArraysOptimized(arr1,arr2, n1, n2);
 
 
     return 0;
