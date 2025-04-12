@@ -29,6 +29,26 @@ void MissingNumberBrute(int arr[], int n){
     }
 }
 
+void MissingNumberBetter(int arr[], int n){
+    // int hashArray[n+1] = {0};     //Not valid in standard C++
+                                     // In standard C++, the size of an array must be known at compile time, 
+                                     // but n is only known at runtime — hence the error.
+
+    vector<int> hashArray(n + 1, 0);
+    for(int i = 0 ;i<n-1 ; i++){
+        hashArray[arr[i]] =1;
+    }
+    for(int i = 1 ;i<n ; i++){
+        if(hashArray[i] == 0){
+            cout<<"Missing Element: "<<i<<endl;
+        }
+    }
+}
+
+void MissingNumberOptimized(int arr[], int n){
+    
+}
+
 int main(){
     int n;
     cin >> n;
@@ -37,6 +57,8 @@ int main(){
         cin >> arr[i];
     }
 
-    MissingNumberBrute(arr,n);
+    // MissingNumberBrute(arr,n);
+    MissingNumberBetter(arr,n);
+    // MissingNumberOptimized(arr,n);
     return 0;
 }

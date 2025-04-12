@@ -11,6 +11,15 @@
         "string": "cpp",
         "string_view": "cpp",
         "vector": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "__locale": "cpp",
+        "bitset": "cpp",
+        "memory": "cpp",
+        "optional": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp",
+        "coroutine": "cpp",
+        "stacktrace": "cpp",
+        "system_error": "cpp"
     }
 }
