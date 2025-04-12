@@ -5,12 +5,22 @@ using namespace std;
 
 void IntersectionBrute(int arr1[],int arr2[], int n1 , int n2 ){
 
-    
-    // return Unionarray;
-    // for(auto it: Unionarray){
-    //     cout<<Unionarray[it]<<" ";
-    // }
-
+    vector<int> Ans;
+    vector<int> visArray = {0};
+    for(int i = 0 ; i < n1 ; i++){
+        for(int j = 0 ; j < n2 ; j++){
+            if(arr1[i] == arr2[j] && visArray[j] == 0){
+                Ans.push_back(arr1[i]);
+                visArray[j] = 1;
+                break;
+            }
+            if(arr2[j]>arr1[i]) break;
+        }
+    }
+    for(auto it: Ans){
+        cout<<it<<" ";
+    }
+ 
 }
 
 int main() {
@@ -38,3 +48,19 @@ int main() {
 
     return 0;
 }
+
+
+
+/*
+
+Provide size of Array: 
+5
+Provide size of Array: 
+5
+Provide Array1: 
+1 2 2 3 3 
+Provide Array2: 
+2 3 3 4 5
+2 3 3 %  
+
+*/
