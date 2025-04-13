@@ -77,7 +77,7 @@ void MissingNumberOptimized(int arr[], int n){
     for(int i = 0; i < n-1; i++){
         xor2 ^= arr[i];
         // xor1 ^ xor1^(i+1);
-        xor1 ^= (i + 1);
+        xor1 ^= (i + 1);      // Optimized XOR loop: avoids extra iteration
 
     }
     xor1 = xor1^n;
