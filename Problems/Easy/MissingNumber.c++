@@ -78,6 +78,18 @@ void MissingNumberOptimized(int arr[], int n){
     cout << ans << endl;
 }
 
+// Here is one more optimized approach for this 
+
+void MissingNumberOptimizedWithNumberSum(int arr[], int n){
+    int sum1 = (n * (n+1))/2;
+    int sum2 = 0;
+    for(int i = 0 ; i< n-1 ; i++){
+        sum2 += arr[i];
+    }
+    int ans = sum1 - sum2;
+    cout<<ans<<endl;
+}
+
 
 int main(){
     int n;
@@ -89,6 +101,7 @@ int main(){
 
     // MissingNumberBrute(arr,n);
     // MissingNumberBetter(arr,n);
-    MissingNumberOptimized(arr,n);
+    // MissingNumberOptimized(arr,n);
+    MissingNumberOptimizedWithNumberSum(arr,n);
     return 0;
 }
