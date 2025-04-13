@@ -125,6 +125,25 @@ void MissingNumberOptimizedWithNumberSum(int arr[], int n)
     cout << ans << endl;
 }
 
+void maxConsecutive(int arr[], int n){
+    int maxC = 1;
+    int counter = 1;
+
+    for(int i = 1; i<n ;i++){
+        if(arr[i] == arr[i-1]){
+            counter +=1;
+            // maxC = counter;
+        }
+        else{
+            counter = 1;
+        }
+        if(counter>maxC){
+            maxC = counter;
+        }
+    }
+    cout<<maxC<<endl;
+}
+
 int main()
 {
     int n;
@@ -137,7 +156,8 @@ int main()
 
     // MissingNumberBrute(arr,n);
     // MissingNumberBetter(arr,n);
-    MissingNumberOptimized(arr, n);
+    // MissingNumberOptimized(arr, n);
     // MissingNumberOptimizedWithNumberSum(arr,n);
+    maxConsecutive(arr,n);
     return 0;
 }
