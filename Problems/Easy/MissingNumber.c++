@@ -45,6 +45,7 @@ void MissingNumberBetter(int arr[], int n){
     }
 }
 
+// In this code I missed the loop range
 // void MissingNumberOptimized(int arr[], int n){
 //     int xor1 = 0;
 //     int xor2 = 0;
