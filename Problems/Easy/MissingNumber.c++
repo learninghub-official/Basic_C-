@@ -66,14 +66,21 @@ void MissingNumberOptimized(int arr[], int n){
     int xor2 = 0;
 
     // XOR of all numbers from 1 to n
-    for(int i = 1; i <= n; i++){
-        xor1 ^= i;
-    }
+    // for(int i = 1; i <= n; i++){
+    //     xor1 ^= i;
+    // }
+
+    // Instead of looping from 0->n we have more optimized approach which is :
+
 
     // XOR of all elements in the array (size n-1)
     for(int i = 0; i < n-1; i++){
         xor2 ^= arr[i];
+        // xor1 ^ xor1^(i+1);
+        xor1 ^= (i + 1);
+
     }
+    xor1 = xor1^n;
 
     int ans = xor1 ^ xor2;
     cout << ans << endl;
@@ -102,7 +109,7 @@ int main(){
 
     // MissingNumberBrute(arr,n);
     // MissingNumberBetter(arr,n);
-    // MissingNumberOptimized(arr,n);
-    MissingNumberOptimizedWithNumberSum(arr,n);
+    MissingNumberOptimized(arr,n);
+    // MissingNumberOptimizedWithNumberSum(arr,n);
     return 0;
 }
