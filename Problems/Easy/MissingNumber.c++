@@ -59,6 +59,7 @@ void MissingNumberBetter(int arr[], int n){
 //     cout<<ans<<endl;
 // }
 
+// This one is correct 
 void MissingNumberOptimized(int arr[], int n){
     int xor1 = 0;
     int xor2 = 0;
