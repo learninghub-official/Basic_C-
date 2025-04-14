@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void aloneNumber(int arr[], int n){
+void aloneNumberBrute(int arr[], int n){
     for(int i =0; i<n ;i++){
         int count = 0;
         for(int j =0; j<n ;j++){
@@ -23,6 +23,6 @@ int main (){
     {
         cin >> arr[i];
     }
-    aloneNumber(arr,n);
+    aloneNumberBrute(arr,n);
     return 0;
 }
