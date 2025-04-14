@@ -34,6 +34,14 @@ int aloneNumberBetter(int arr[], int n){
     }
 }
 
+int aloneNumberOptimal(int arr[], int n){
+    int xorr = 0;
+    for(int i = 0 ; i < n ; i++){
+        xorr = xorr^arr[i];
+    }
+    return xorr;
+}
+
 int main (){
     int n;
     cin >> n;
@@ -44,7 +52,7 @@ int main (){
     }
     // aloneNumberBrute(arr,n);
     // aloneNumberBetter(arr,n);
-    int result = aloneNumberBetter(arr, n);  // capture returned value
+    int result = aloneNumberOptimal(arr, n);  // capture returned value
     cout << result << endl;       
     return 0;
 }
