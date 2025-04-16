@@ -17,7 +17,7 @@ void LongestSubArrayWithGivenSumK(int arr[], int n ,int k){
 
 
 int main() {
-    cout<<"Provide size of Array: "<<en
+    cout<<"Provide size of Array: "<<e
     int n;
     cin >> n;
     int k;
