@@ -31,6 +31,7 @@ void TwoSum(int arr[], int n ,int k){
             if (Currsum == k){
                 cout<<"True"<<endl;
                 cout<<arr[i]<<" + "<<arr[j]<<" = "<<k<<endl;
+                return;
             }
         }
     }
@@ -66,6 +67,4 @@ Provide Array:
 2 6 5 8 11
 True
 6 + 8 = 14
-True
-8 + 6 = 14
 */
