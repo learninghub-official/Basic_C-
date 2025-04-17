@@ -9,7 +9,9 @@ void LongestSubArrayWithGivenSumK(int arr[], int n ,int k){
         int s = 0;
         for(int j =i; j<n ;j++){
             s +=arr[j];
-            if(s == k) lenght = max(lenght, j-i+1);
+            if(s == k) {
+                lenght = max(lenght, j-i+1);
+            }            
         }
     }
     cout<<lenght<<endl;
