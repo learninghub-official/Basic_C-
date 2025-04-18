@@ -2,11 +2,6 @@
 
 # # n = int(input()) # taking input 
 # # l = []   # empty list        
-# # for i in range(n):          #loop 
-# #     l.append(input())
-# # for i in range(len(l)):
-# #     count1 = 0
-# #     count2 = 0
 
 
 '''
