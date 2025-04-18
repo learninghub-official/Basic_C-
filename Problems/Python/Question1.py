@@ -1,28 +1,4 @@
 
-
-
-
-
-
-
-# class Pepper:
-#     def __init__(self, name,color,SHI,price):
-#         self.name = name
-#         self.color = color
-#         self.SHI = SHI
-#         self.price = price
-# class Store:
-#     def __init__(self,listt):
-#         self.listt = listt
-#     def SortByYellow(self):
-#         for i in listt:
-#             if i.color.islower() == 'Yellow':
-#                 print(i.name)
-#         else:
-#             return None
-            
-
-
     
   
 # n = int(input("Enter Total Number of Spices you want to check in:  "))   
