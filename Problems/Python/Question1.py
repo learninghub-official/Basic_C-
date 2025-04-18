@@ -1,9 +1,5 @@
 
 
-# # n = int(input()) # taking input 
-# # l = []   # empty list        
-
-
 '''
 Input:
 3
