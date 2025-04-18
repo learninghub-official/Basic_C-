@@ -24,8 +24,6 @@
 # print(objectPepper.SortByYellow())
 
 
-
-
 class Pepper:
     def __init__(self, name, color, SHI, price):
         self.name = name
