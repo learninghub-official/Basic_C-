@@ -1,37 +1,5 @@
 
 
-'''
-Input:
-3
-corona
-red
-15000 
-32
-nupur
-green
-42350
-90
-greenchilli
-yellow
-12343
-43
-
-Output:
-
-Spiciest Pepper :
-nupur with green of SHI : 42350
-
-Sorted Pepper by price :
-corona
-32.0
-greenchilli
-43.0
-nupur
-90.0
-
-'''
-
-
 
 
 
