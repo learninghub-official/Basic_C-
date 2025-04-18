@@ -7,11 +7,6 @@
 # # for i in range(len(l)):
 # #     count1 = 0
 # #     count2 = 0
-# #     for j in l:
-       
-# #         if j.isidentifier() or (j.isspace()):
-# #                 count1 +=1
-
 
 
 '''
