@@ -2,11 +2,11 @@
 #include <set>
 using namespace std;
 
-void TwoSumBruteForce(int arr[], int n ,int k){
+void TwoSumBruteForce1(int arr[], int n ,int k){
     int Currsum = 0;
     int j,i;
     for(int i = 0 ;i<n ;i++){
-        for(j = 0 ; j<n ; j++){
+        for(j = 0 ; j<n ; j++){       // This approach is O(n^2)
             if(i == j){
                 continue;
             }
@@ -21,6 +21,29 @@ void TwoSumBruteForce(int arr[], int n ,int k){
     }
 }
 
+void TwoSumBruteForce2(int arr[], int n ,int k){
+    int Currsum = 0;
+    int j,i;
+    for(int i = 0 ;i<n ;i++){
+        for(j = i+1 ; j<n ; j++){      // This approach is slightly lesser than O(n^2)
+            // if(i == j){
+            //     continue;
+            // }
+            Currsum = arr[j] + arr[i];
+            // cout<<"Check here"<<Currsum<<endl;
+            if (Currsum == k){
+                cout<<"True"<<endl;
+                cout<<arr[i]<<" at: "<<i<<" + "<<arr[j]<<" at: "<<j<<" = "<<k<<endl;
+                return;
+            }
+        }
+    }
+}
+
+
+void TwoSumBetter(int arr[], int n ,int k){
+
+}
 
 int main() {
     cout<<"Provide size of Array: "<<endl;
@@ -35,7 +58,9 @@ int main() {
         cin >> arr[i];
     }
 
-    TwoSumBruteForce(arr, n,k);
+    // TwoSumBruteForce1(arr, n,k);
+    // TwoSumBruteForce2(arr, n,k);
+    TwoSumBetter(arr, n,k);
 
 
     return 0;
