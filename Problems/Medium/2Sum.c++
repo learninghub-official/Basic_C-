@@ -84,6 +84,26 @@ void TwoSumBetter(int arr[], int n, int k) {
 }
 
 */
+
+
+void TwoSumOptimized(int arr[], int n, int k){
+    int left = 0;
+    int right = n-1;
+    while(left<right){
+        int sum = arr[left] + arr[right];
+        if(sum == k){
+            cout<<"YES"<<endl;
+            return;
+        }
+        else if (sum < k){
+            left++;
+        }
+        else {
+            right--;
+        }
+    }
+    cout<<"No";
+}
 int main() {
     cout<<"Provide size of Array: "<<endl;
     int n;
@@ -99,7 +119,8 @@ int main() {
 
     // TwoSumBruteForce1(arr, n,k);
     // TwoSumBruteForce2(arr, n,k);
-    TwoSumBetter(arr, n,k);
+    // TwoSumBetter(arr, n,k);
+    TwoSumOptimized(arr, n,k);
 
 
     return 0;
