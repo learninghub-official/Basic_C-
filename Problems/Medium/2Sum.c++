@@ -2,7 +2,7 @@
 #include <set>
 using namespace std;
 
-void TwoSum(int arr[], int n ,int k){
+void TwoSumBruteForce(int arr[], int n ,int k){
     int Currsum = 0;
     int j,i;
     for(int i = 0 ;i<n ;i++){
@@ -35,7 +35,7 @@ int main() {
         cin >> arr[i];
     }
 
-    TwoSum(arr, n,k);
+    TwoSumBruteForce(arr, n,k);
 
 
     return 0;
