@@ -57,6 +57,33 @@ void TwoSumBetter(int arr[], int n, int k) {
     cout << "False" << endl;
 }
 
+// Explaination 
+/*
+// Function to check if any two numbers in the array sum up to 'k'
+void TwoSumBetter(int arr[], int n, int k) {
+    map<int, int> mpp;  // Create a map to store array values and their indices
+
+    for(int i = 0; i < n; i++) {     // Loop through the array
+        int a = arr[i];              // Current element
+        int more = k - a;            // The number needed to form the sum 'k' with current element
+
+        // Check if the required number 'more' already exists in the map
+        if(mpp.find(more) != mpp.end()) {
+            cout << "True" << endl;  // If found, print True
+            // Print the indices of the pair that adds up to 'k'
+            cout << "Indexes are: " << mpp[more] << ", " << i << endl;
+            return;                  // Exit the function after finding a valid pair
+        }
+
+        // If 'more' is not found, store the current element and its index in the map
+        mpp[a] = i;
+    }
+
+    // If loop completes without finding a pair, print False
+    cout << "False" << endl;
+}
+
+*/
 int main() {
     cout<<"Provide size of Array: "<<endl;
     int n;
