@@ -1,5 +1,6 @@
 #include<iostream>
 #include <set>
+#include <map>
 using namespace std;
 
 void TwoSumBruteForce1(int arr[], int n ,int k){
@@ -41,8 +42,19 @@ void TwoSumBruteForce2(int arr[], int n ,int k){
 }
 
 
-void TwoSumBetter(int arr[], int n ,int k){
-
+void TwoSumBetter(int arr[], int n, int k) {
+    map<int, int> mpp;
+    for(int i = 0; i < n; i++) {
+        int a = arr[i];
+        int more = k - a;
+        if(mpp.find(more) != mpp.end()) {
+            cout << "True" << endl;
+            cout << "Indexes are: " << mpp[more] << ", " << i << endl;
+            return; // optional: if you want to stop after finding one pair
+        }
+        mpp[a] = i;
+    }
+    cout << "False" << endl;
 }
 
 int main() {
