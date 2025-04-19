@@ -14,7 +14,7 @@ void TwoSumBruteForce(int arr[], int n ,int k){
             // cout<<"Check here"<<Currsum<<endl;
             if (Currsum == k){
                 cout<<"True"<<endl;
-                cout<<arr[i]<<" + "<<arr[j]<<" = "<<k<<endl;
+                cout<<arr[i]<<"at: "<<i<<" + "<<arr[j]<<"at: "<<j<<" = "<<k<<endl;
                 return;
             }
         }
