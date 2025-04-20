@@ -1,3 +1,22 @@
+/*
+    Dutch National Flag Algorithm Explanation:
+
+    This algorithm sorts an array containing only 0s, 1s, and 2s in one pass.
+
+    Pointers:
+    - low: boundary for 0s
+    - mid: current index
+    - high: boundary for 2s
+
+    Logic:
+    - Swap 0 to the beginning, move low and mid forward
+    - Leave 1 in the middle, just move mid forward
+    - Swap 2 to the end, move high backward
+
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm> // for swap
