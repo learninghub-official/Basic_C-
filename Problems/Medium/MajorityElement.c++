@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// issue in Handling no majority element code 
 // void MajorityElement(int arr[], int n) {
 //     for(int i =0;i<n;i++){
 //         int count = 0;
