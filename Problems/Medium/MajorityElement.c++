@@ -4,8 +4,7 @@
 
 using namespace std;
 
-void MajorityElement(vector<int>& arr) {
-    int n = arr.size();
+void MajorityElement(int arr[], int n) {
     for(int i =0;i<n;i++){
         int count = 0;
         for(int j = 0;j<n;j++){
@@ -13,22 +12,25 @@ void MajorityElement(vector<int>& arr) {
                 count++;
             }
         }
-        if(count>n/2){
-            cout<<arr[i];
-        }
+    if(count>n/2){
+        cout<<arr[i];
     }
+    else cout << "No majority element found!" << endl; return;
+    
+    }
+    
+
 }
 
 int main() {
-    vector<int> nums = {2, 0, 2, 1, 1, 0};
-
-    MajorityElement(nums);
-
-    cout << "Sorted colors: ";
-    for (int num : nums) {
-        cout << num << " ";
+    int n;
+    cin >> n;
+    int arr[n];
+    for(int i = 0 ; i<n ; i++){
+        cin>>arr[i];
     }
-    cout << endl;
+
+    MajorityElement(arr,n);
 
     return 0;
 }
