@@ -20,6 +20,7 @@
         "variant": "cpp",
         "coroutine": "cpp",
         "stacktrace": "cpp",
-        "system_error": "cpp"
+        "system_error": "cpp",
+        "source_location": "cpp"
     }
 }
