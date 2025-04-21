@@ -47,10 +47,10 @@ void MajorityElementBrute(int arr[], int n) {
 }
 
 void MajorityElementBetter(int arr[], int n){
-    bool Found;
+    bool Found = false;
     unordered_map<int, int> countMap;
     for(int i =0; i<n ;i++){
-        countMap[arr[i]];
+        countMap[arr[i]]++;
     }
     for(auto it: countMap){
         if(it.second > n / 2){
