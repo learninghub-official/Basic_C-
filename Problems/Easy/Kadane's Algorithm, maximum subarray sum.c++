@@ -22,7 +22,7 @@ int main() {
     }
 
     // MajorityElementBrute(arr,n);
-    MajorityElementBetter(arr,n);
+    // MajorityElementBetter(arr,n);
 
     return 0;
 }
