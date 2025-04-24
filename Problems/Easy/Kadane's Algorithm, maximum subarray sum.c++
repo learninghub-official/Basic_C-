@@ -21,7 +21,7 @@ int main() {
         cin>>arr[i];
     }
 
-    // MajorityElementBrute(arr,n);
+    MajorityElementBrute(arr,n);
     // MajorityElementBetter(arr,n);
 
     return 0;
