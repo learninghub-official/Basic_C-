@@ -3,7 +3,7 @@
 using namespace std;
 
 // Brute force approach 
-void SumOfLongestSubArray(int arr[], int n ,int k){
+void SumOfLongestSubArray(int arr[], int n ){
     int maxi = INT_MIN;
     for(int i = 0;i<n; i++){
         for(int j = i ; j<n ; j++){
@@ -22,9 +22,6 @@ int main() {
     cout<<"Provide size of Array: "<<endl;
     int n;
     cin >> n;
-    int k;
-    cout<<"Provide Sum: "<<endl;
-    cin>>k;
     int arr[n];
     cout<<"Provide Array: "<<endl;
     for (int i = 0; i < n; i++) {
@@ -34,7 +31,7 @@ int main() {
 
     // ZeroToEnd(arr, n);
     // UnionOf2Arrays(arr1,arr2, n1, n2);
-    SumOfLongestSubArray(arr, n,k);
+    SumOfLongestSubArray(arr, n);
 
 
     return 0;
