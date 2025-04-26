@@ -30,6 +30,9 @@ void SumOfLongestSubArrayBetter(int arr[], int n ){
     cout<<maxi;
 }
 
+void SumOfLongestSubArrayOptimized(int arr[], int n ){
+
+}
 
 int main() {
     cout<<"Provide size of Array: "<<endl;
@@ -45,7 +48,8 @@ int main() {
     // ZeroToEnd(arr, n);
     // UnionOf2Arrays(arr1,arr2, n1, n2);
     // SumOfLongestSubArrayBrute(arr, n);
-    SumOfLongestSubArrayBrute(arr, n);
+    // SumOfLongestSubArrayBrute(arr, n);
+    SumOfLongestSubArrayOptimized(arr, n);
 
 
     return 0;
