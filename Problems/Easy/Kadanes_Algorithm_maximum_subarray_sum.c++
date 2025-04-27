@@ -31,7 +31,43 @@ void SumOfLongestSubArrayBetter(int arr[], int n ){
 }
 
 void SumOfLongestSubArrayOptimized(int arr[], int n ){
+    int sum = 0;
+    int maxi = INT_MIN;
+    for(int i = 0 ; i< n ; i++){
+        sum += arr[i];
 
+        if(sum>maxi){
+            maxi = sum;
+        }
+        if(sum<0){
+            sum = 0;
+        }
+    }
+    cout<<maxi;
+}
+
+void SumOfLongestSubArrayWithElementsOptimized(int arr[], int n ){
+    int sum = 0;
+    int ansStart = -1;
+    int ansEnd = -1;
+    int maxi = INT_MIN;
+    int start;
+    for(int i = 0 ; i< n ; i++){
+        if(sum ==0){
+            start = i;
+        }
+        sum += arr[i];
+
+        if(sum>maxi){
+            maxi = sum;
+            ansStart = start;
+            ansEnd = i;
+        }
+        if(sum<0){
+            sum = 0;
+        }
+    }
+    cout<<maxi;
 }
 
 int main() {
@@ -49,7 +85,8 @@ int main() {
     // UnionOf2Arrays(arr1,arr2, n1, n2);
     // SumOfLongestSubArrayBrute(arr, n);
     // SumOfLongestSubArrayBrute(arr, n);
-    SumOfLongestSubArrayOptimized(arr, n);
+    // SumOfLongestSubArrayOptimized(arr, n);
+    SumOfLongestSubArrayWithElementsOptimized(arr, n);
 
 
     return 0;
