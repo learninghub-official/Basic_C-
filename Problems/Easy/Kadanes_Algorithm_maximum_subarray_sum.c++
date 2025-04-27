@@ -46,28 +46,36 @@ void SumOfLongestSubArrayOptimized(int arr[], int n ){
     cout<<maxi;
 }
 
-void SumOfLongestSubArrayWithElementsOptimized(int arr[], int n ){
+void SumOfLongestSubArrayWithElementsOptimized(int arr[], int n) {
     int sum = 0;
     int ansStart = -1;
     int ansEnd = -1;
     int maxi = INT_MIN;
     int start;
-    for(int i = 0 ; i< n ; i++){
-        if(sum ==0){
+
+    for (int i = 0; i < n; i++) {
+        if (sum == 0) {
             start = i;
         }
         sum += arr[i];
 
-        if(sum>maxi){
+        if (sum > maxi) {
             maxi = sum;
             ansStart = start;
             ansEnd = i;
         }
-        if(sum<0){
+        if (sum < 0) {
             sum = 0;
         }
     }
-    cout<<maxi;
+
+    cout << "Maximum Sum: " << maxi << endl;
+
+    cout << "Elements of Longest Subarray with Maximum Sum: ";
+    for (int i = ansStart; i <= ansEnd; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 }
 
 int main() {
