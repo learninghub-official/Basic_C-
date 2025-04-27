@@ -1,3 +1,44 @@
+/*
+-----------------------------------------
+     Kadane's Algorithm Explanation
+-----------------------------------------
+
+Problem:
+- Find the maximum sum of a contiguous subarray in a given array.
+
+How it works:
+1. Initialize two variables:
+   - sum = 0 (stores the current running sum)
+   - maxi = INT_MIN (stores the maximum sum found so far)
+
+2. Traverse the array from start to end:
+   - Add the current element to sum.
+   - Update maxi if the current sum is greater than maxi.
+   - If sum becomes negative, reset sum to 0.
+     (Because a negative sum will reduce the future sum.)
+
+3. After the loop, maxi will hold the maximum subarray sum.
+
+Why reset sum to 0?
+- If the running sum becomes negative, it won't contribute to a maximum sum.
+- Starting fresh with 0 helps to find a better subarray ahead.
+
+Time Complexity:
+- O(N) (only one pass through the array)
+
+Space Complexity:
+- O(1) (no extra space used)
+
+Example:
+Input:  arr = [-2, -3, 4, -1, -2, 1, 5, -3]
+Output: 7
+Explanation: The subarray [4, -1, -2, 1, 5] has the maximum sum 7.
+
+-----------------------------------------
+*/
+
+
+
 #include<iostream>
 #include <set>
 using namespace std;
