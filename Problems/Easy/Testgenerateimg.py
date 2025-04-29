@@ -33,3 +33,5 @@ def generate_bouquet_image(prompt):
 # -- run task --
 if __name__ == "__main__":
     generate_bouquet_image("Create an image containing a bouquet of 2 sunflowers and 3 roses.")
+
+
