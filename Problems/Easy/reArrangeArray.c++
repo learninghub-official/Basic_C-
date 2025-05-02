@@ -3,7 +3,7 @@
 using namespace std;
 
 // Function to rearrange the array
-vector<int> rearrangeArray(vector<int>& nums) {
+vector<int> rearrangeArrayBrute(vector<int>& nums) {
     int n = nums.size();
     vector<int> ans(n, 0);
     int posIDX = 0;
