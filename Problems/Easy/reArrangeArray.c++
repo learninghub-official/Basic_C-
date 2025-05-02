@@ -24,7 +24,7 @@ int main() {
     // Example input
     vector<int> nums = {3, 1, -2, -5, 2, -4};
 
-    vector<int> result = rearrangeArray(nums);
+    vector<int> result = rearrangeArrayBrute(nums);
 
     // Output the rearranged array
     cout << "Rearranged array: ";
