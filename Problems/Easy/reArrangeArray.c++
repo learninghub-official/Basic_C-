@@ -3,7 +3,7 @@
 using namespace std;
 
 // Function to rearrange the array
-vector<int> rearrangeArrayBrute(vector<int>& nums) {
+vector<int> rearrangeArray(vector<int>& nums) {
     int n = nums.size();
     vector<int> ans(n, 0);
     int posIDX = 0;
@@ -20,7 +20,27 @@ vector<int> rearrangeArrayBrute(vector<int>& nums) {
     return ans;
 }
 
+int main() {
+    int n;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+    
+    vector<int> nums(n);
+    cout << "Enter " << n << " integers (positive and negative): ";
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
 
+    vector<int> result = rearrangeArray(nums);
+
+    cout << "Rearranged array: ";
+    for (int i = 0; i < result.size(); i++) {
+        cout << result[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
 
 /*
 Time Complexity: O(n)
@@ -29,9 +49,10 @@ Time Complexity: O(n)
 Space Complexity: O(n)
 - We use an extra array 'ans' of the same size as input.
 
-Input:
-nums = [3, 1, -2, -5, 2, -4]
+Sample Input:
+Enter the number of elements: 6
+Enter 6 integers (positive and negative): 3 1 -2 -5 2 -4
 
-Output:
+Sample Output:
 Rearranged array: 3 -2 1 -5 2 -4
 */
