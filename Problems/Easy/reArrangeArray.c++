@@ -3,6 +3,11 @@
 using namespace std;
 
 // Function to rearrange the array
+vector<int> rearrangeArrayBrute(vector<int>& nums) {
+    int n = nums.size();
+    vector<int> ans(n, 0);
+
+}
 vector<int> rearrangeArrayoptimized(vector<int>& nums) {
     int n = nums.size();
     vector<int> ans(n, 0);
@@ -31,7 +36,8 @@ int main() {
         cin >> nums[i];
     }
 
-    vector<int> result = rearrangeArrayoptimized(nums);
+    // vector<int> result = rearrangeArrayoptimized(nums);
+    vector<int> result = rearrangeArrayBrute(nums);
 
     cout << "Rearranged array: ";
     for (int i = 0; i < result.size(); i++) {
