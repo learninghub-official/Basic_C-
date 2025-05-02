@@ -3,11 +3,56 @@
 using namespace std;
 
 // Function to rearrange the array
-vector<int> rearrangeArrayBrute(vector<int>& nums) {
-    int n = nums.size();
-    vector<int> ans(n, 0);
 
+vector<int> rearrangeArrayBrute(vector<int>& nums) {
+    vector<int> posArr;
+    vector<int> negArr;
+    vector<int> finalArr(nums.size());
+
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] > 0) {
+            posArr.push_back(nums[i]);
+        } else {
+            negArr.push_back(nums[i]);
+        }
+    }
+
+    int idx = 0;
+    for (int i = 0; i < posArr.size(); i++) {
+        finalArr[idx++] = posArr[i];
+        finalArr[idx++] = negArr[i];
+    }
+
+    return finalArr;
 }
+
+
+// wrong approach with this output:
+// Enter the number of elements: 6
+// Enter 6 integers (positive and negative): 3 1 -2 -5 2 -4
+// Rearranged array: 0 0 0 0 0 0 0 0 0 0 0 0 3 -2 1 -5 2 -4 
+// vector<int> rearrangeArrayBrute(vector<int>& nums) {
+//     int n = nums.size();
+//     vector<int> posArr(n/2, 0);
+//     vector<int> negArr(n/2, 0);
+//     vector<int> finalArr(n, 0);
+
+
+//     for(int i = 0 ; i < n ; i++){
+//         if(nums[i]>0){
+//             posArr.push_back(nums[i]);
+//         }
+//         else{
+//             negArr.push_back(nums[i]);
+//         }
+//     }
+//     for(int i = 0 ; i < n ; i++){
+//         finalArr.push_back(posArr[i]);
+//         finalArr.push_back(negArr[i]);
+
+//     }
+//     return finalArr;
+// }
 vector<int> rearrangeArrayoptimized(vector<int>& nums) {
     int n = nums.size();
     vector<int> ans(n, 0);
