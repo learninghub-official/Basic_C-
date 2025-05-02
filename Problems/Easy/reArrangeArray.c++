@@ -20,21 +20,7 @@ vector<int> rearrangeArrayBrute(vector<int>& nums) {
     return ans;
 }
 
-int main() {
-    // Example input
-    vector<int> nums = {3, 1, -2, -5, 2, -4};
 
-    vector<int> result = rearrangeArrayBrute(nums);
-
-    // Output the rearranged array
-    cout << "Rearranged array: ";
-    for (int i = 0; i < result.size(); i++) {
-        cout << result[i] << " ";
-    }
-    cout << endl;
-
-    return 0;
-}
 
 /*
 Time Complexity: O(n)
