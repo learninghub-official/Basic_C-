@@ -27,8 +27,8 @@ vector<int> rearrangeArrayBrute(vector<int>& nums) {
 }
 
 
-// wrong approach with this output
-// Enter the number of elements
+// wrong approach with this output:
+// Enter the number of elements: 6
 // Enter 6 integers (positive and negative): 3 1 -2 -5 2 -4
 // Rearranged array: 0 0 0 0 0 0 0 0 0 0 0 0 3 -2 1 -5 2 -4 
 // vector<int> rearrangeArrayBrute(vector<int>& nums) {
