@@ -95,7 +95,7 @@ int main() {
 
 /*
 Time Complexity: O(n)
-- We iterate through the array once (size n), so linear time.
+- We iterate through the array once (sise n), so linear time.
 
 Space Complexity: O(n)
 - We use an extra array 'ans' of the same size as input.
