@@ -70,7 +70,7 @@ vector<int> rearrangeArrayoptimized(vector<int>& nums) {
     return ans;
 }
 
-int main() {
+int main() 
     int n;
     cout << "Enter the number of elements: ";
     cin >> n;
