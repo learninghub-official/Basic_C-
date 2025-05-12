@@ -23,6 +23,10 @@ vector<int> LeaderInTheArrayBrute(vector<int> &arr, int n) {
     return leaders;
 }
 
+vector<int> LeaderInTheArrayOptimized(vector<int> &arr, int n){
+
+}
+
 int main() {
     int n;
     cin >> n;
@@ -32,7 +36,8 @@ int main() {
         cin >> arr[i];
     }
 
-    vector<int> result = LeaderInTheArrayBrute(arr, n);
+    // vector<int> result = LeaderInTheArrayBrute(arr, n);
+    vector<int> result = LeaderInTheArrayOptimized(arr, n);
 
     for (int num : result) {
         cout << num << " ";
