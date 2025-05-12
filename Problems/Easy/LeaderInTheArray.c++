@@ -15,7 +15,7 @@ vector<int> LeaderInTheArrayBrute(vector<int> &arr, int n) {
                 break;
             }
         }
-        if (isLeader) {
+        if (isLeader == true) {
             leaders.push_back(arr[i]);
         }
     }
