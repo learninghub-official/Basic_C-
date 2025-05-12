@@ -115,3 +115,48 @@ int main() {
 // Find next larger: 3 > 2 → swap 2 and 3 → [1, 3, 2]
 
 // Reverse from index 2 to end (already sorted) → [1, 3, 2]
+
+
+// Here's the **time and space complexity** analysis for your `nextpermutationBrute` function:
+
+// ---
+
+// ### ✅ **Time Complexity: `O(n)`**
+
+// Breakdown:
+
+// 1. **Finding the breakpoint (`ind`)**:
+
+//    * This loop runs at most `n - 1` times ⇒ `O(n)`
+
+// 2. **Finding the next greater element to swap**:
+
+//    * This also runs at most `n - 1` times ⇒ `O(n)`
+
+// 3. **Reversing the subarray from `ind + 1` to end**:
+
+//    * Worst case, it reverses almost the whole array ⇒ `O(n)`
+
+// So overall:
+// 🔹 **`O(n) + O(n) + O(n) = O(n)`**
+
+// ---
+
+// ### ✅ **Space Complexity: `O(1)` (In-Place)**
+
+// * You're modifying the input vector in-place.
+// * No extra data structures are used for computation (other than a few variables like `ind`).
+
+// So:
+// 🔹 **Space Complexity = `O(1)`**
+
+// ---
+
+// ### 📌 Summary:
+
+// | Metric    | Complexity |
+// | --------- | ---------- |
+// | **Time**  | `O(n)`     |
+// | **Space** | `O(1)`     |
+
+// Would you like the same logic using STL's `std::next_permutation` for comparison?
