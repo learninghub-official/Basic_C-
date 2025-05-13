@@ -14,7 +14,7 @@ bool linearSearch(const vector<int>& arr, int NumberToSearch){
 }
 
 // Function to find the length of longest consecutive sequence
-int LongestConsecutiveSequence(vector<int> &arr, int n) {
+int LongestConsecutiveSequenceBrute(vector<int> &arr, int n) {
     int longest = 0;
 
     for(int i = 0; i < n; i++) {
@@ -41,8 +41,18 @@ int main() {
         cin >> arr[i];
     }
 
-    int result = LongestConsecutiveSequence(arr, n);
+    int result = LongestConsecutiveSequenceBrute(arr, n);
     cout << result << endl;
 
     return 0;
 }
+
+
+/*
+
+9
+102 4 100 1 101 3 2 1 1
+
+4
+
+*/
