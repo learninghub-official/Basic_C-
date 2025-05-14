@@ -65,3 +65,6 @@ int main() {
 10 22 12 3 0 6
 22 12 6
 */
+
+
+// Explained version with comments:
