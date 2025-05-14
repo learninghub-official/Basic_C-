@@ -4,61 +4,33 @@
 using namespace std;
 
 // Properly returns whether the number exists in the array
-// bool linearSearch(const vector<int>& arr, int NumberToSearch){
-//     for(int i = 0 ; i < arr.size(); i++){
-//         if(arr[i] == NumberToSearch){
-//             return true;
-//         }
-//     }
-//     return false;
-// }
-
-// // Function to find the length of longest consecutive sequence
-// int LongestConsecutiveSequenceBrute(vector<int> &arr, int n) {
-//     int longest = 1;
-
-//     for(int i = 0; i < n; i++) {
-//         int x = arr[i];
-//         int count = 1;
-
-//         while(linearSearch(arr, x + 1) == true) {
-//             x = x + 1;
-//             count++;
-//         }
-
-//         longest = max(longest, count);
-//     }
-
-//     return longest;
-// }
-bool linearSearch(vector<int> &arr, int NumberToSearch){
-    int n = arr.size();
-    for(int i = 0 ; i<n ; i++){
-        if(NumberToSearch == arr[i]){
+bool linearSearch(const vector<int>& arr, int NumberToSearch){
+    for(int i = 0 ; i < arr.size(); i++){
+        if(arr[i] == NumberToSearch){
             return true;
         }
     }
     return false;
-
 }
 
-int LongestConsecutiveSequenceBrute(vector<int> &arr, int n){
-    // int longest = 1;
-    int count = 0;
-    for(int i = 0 ; i < n ; i++){
+// Function to find the length of longest consecutive sequence
+int LongestConsecutiveSequenceBrute(vector<int> &arr, int n) {
+    int longest = 1;
+
+    for(int i = 0; i < n; i++) {
         int x = arr[i];
         int count = 1;
-        while(linearSearch(arr, x+1) == true){
-            x = x+1;
-            count +=1;
-        }
-        // longest = max(longest, count);
-        
-    }
-    // return longest;
-    return count;
-}
 
+        while(linearSearch(arr, x + 1) == true) {
+            x = x + 1;
+            count++;
+        }
+
+        longest = max(longest, count);
+    }
+
+    return longest;
+}
 
 int main() {
     int n;
