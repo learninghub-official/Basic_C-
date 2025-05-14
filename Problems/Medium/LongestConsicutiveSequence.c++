@@ -32,13 +32,21 @@ int LongestConsecutiveSequenceBrute(vector<int> &arr, int n) {
     return longest;
 }
 
-vector<int> LongestConsecutiveSequenceBetter(vector<int> &arr, int n){
+int LongestConsecutiveSequenceBetter(vector<int> &arr, int n){
     sort(arr.begin(), arr.end());
-    vector<int> temp;
-    for(auto it: arr){
-        temp.push_back(arr[it]);
+    int longest = 1 , currentcount = 0, lastSmaller = INT_MIN;
+    for(int i = 0 ; i < n ; i++){
+        if(arr[i] -1 == lastSmaller){
+            currentcount++;
+            lastSmaller = arr[i];
+        }
+        else if (arr[i] != lastSmaller){
+            currentcount = 1;
+            lastSmaller = arr[i];
+        }
+        longest = max(longest, currentcount); 
     }
-    return temp;
+    return longest;
     
 }
 
@@ -52,12 +60,8 @@ int main() {
     }
 
     // int result = LongestConsecutiveSequenceBrute(arr, n);
-    // int result = LongestConsecutiveSequenceBetter(arr, n);
-    // cout << result << endl;
-    LongestConsecutiveSequenceBetter(arr,n);
-    for(auto it: arr){
-        cout<<arr[it];
-    }
+    int result = LongestConsecutiveSequenceBetter(arr, n);
+    cout << result << endl;
 
     return 0;
 }
