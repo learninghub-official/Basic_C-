@@ -50,6 +50,14 @@ int LongestConsecutiveSequenceBetter(vector<int> &arr, int n){
     
 }
 
+int LongestConsecutiveSequenceBetter(vector<int> &arr, int n){
+    unordered_set<int> st;
+
+    for(int i = 0 ; i < n ; i++){
+        st.insert(arr[i]);
+    }
+}
+
 int main() {
     int n;
     cin >> n;
