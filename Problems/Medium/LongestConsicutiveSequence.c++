@@ -56,6 +56,9 @@ int LongestConsecutiveSequenceBetter(vector<int> &arr, int n){
     for(int i = 0 ; i < n ; i++){
         st.insert(arr[i]);
     }
+    for(auto it: st){
+        
+    }
 }
 
 int main() {
