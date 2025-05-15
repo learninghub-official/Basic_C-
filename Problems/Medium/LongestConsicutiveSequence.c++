@@ -58,7 +58,7 @@ int LongestConsecutiveSequenceOptimized(vector<int> &arr, int n){
         st.insert(arr[i]);
     }
     for(auto it: st){
-        if(st.find(it) == st.end()){
+        if(st.find(it-1) == st.end()){
             int cnt = 1;
             int x = it;
             while(st.find(x+1) != st.end()){
