@@ -50,7 +50,7 @@ int LongestConsecutiveSequenceBetter(vector<int> &arr, int n){
     
 }
 
-int LongestConsecutiveSequenceBetter(vector<int> &arr, int n){
+int LongestConsecutiveSequenceOptimized(vector<int> &arr, int n){
     unordered_set<int> st;
     int longest = 1;
     if(n == 0) return 0;
@@ -81,7 +81,8 @@ int main() {
     }
 
     // int result = LongestConsecutiveSequenceBrute(arr, n);
-    int result = LongestConsecutiveSequenceBetter(arr, n);
+    // int result = LongestConsecutiveSequenceBetter(arr, n);
+    int result = LongestConsecutiveSequenceOptimized(arr, n);
     cout << result << endl;
 
     return 0;
