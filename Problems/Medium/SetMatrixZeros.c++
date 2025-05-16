@@ -18,3 +18,16 @@ int main(){
     cin>>m;
     SetMatrixZeros(n,m);
 }
+
+
+// for now 
+
+/*
+4
+5
+11111
+11111
+11111
+11111
+
+*/
