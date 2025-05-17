@@ -67,7 +67,7 @@ void SetMatrixZerosBrute(int arr[][MAX], int n, int m) {
 // }
 
 void SetMatrixZerosOptimal(int arr[][MAX], int n, int m){
-    // will understande later which is i don't know when will come 
+    //this apporach of Striver's is confusing, will understande later which is i don't know when will come 
 }
 
 void printMatrix(int arr[][MAX], int n, int m) {
