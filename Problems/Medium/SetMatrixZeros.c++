@@ -42,33 +42,33 @@ void SetMatrixZerosBrute(int arr[][MAX], int n, int m) {
 
 */
 
-// void SetMatrixZerosBetter(int arr[][MAX], int n, int m) {
-//     // int row[n] = {0};
-//     // int col[m] = {0};
+void SetMatrixZerosBetter(int arr[][MAX], int n, int m) {
+    // int row[n] = {0};
+    // int col[m] = {0};
 
-//     vector<int> row(n, 0);
-//     vector<int> col(m, 0);
+    vector<int> row(n, 0);
+    vector<int> col(m, 0);
 
-//     for (int i = 0; i < n; i++){
-//         for (int j = 0; j < m; j++){
-//             if (arr[i][j] == 0) {
-//                 row[i] = 1;
-//                 col[j] = 1;
-//             }
-//         }
-//     }
-//     for (int i = 0; i < n; i++){
-//         for (int j = 0; j < m; j++){
-//             if(row[i] || col[j]){
-//                 arr[i][j] = 0;
-//             }
-//         }
-//     }
-// }
-
-void SetMatrixZerosOptimal(int arr[][MAX], int n, int m){
-    //this apporach of Striver's is confusing, will understande later which is i don't know when will come 
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+            if (arr[i][j] == 0) {
+                row[i] = 1;
+                col[j] = 1;
+            }
+        }
+    }
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+            if(row[i] || col[j]){
+                arr[i][j] = 0;
+            }
+        }
+    }
 }
+
+// void SetMatrixZerosOptimal(int arr[][MAX], int n, int m){
+//     //this apporach of Striver's is confusing, will understande later which is i don't know when will come 
+// }
 
 void printMatrix(int arr[][MAX], int n, int m) {
     for (int i = 0; i < n; i++) {
@@ -92,8 +92,8 @@ int main() {
     }
 
     // SetMatrixZerosBrute(arr, n, m);
-    // SetMatrixZerosBetter(arr, n, m);
-    SetMatrixZerosOptimal(arr, n, m);
+    SetMatrixZerosBetter(arr, n, m);
+    // SetMatrixZerosOptimal(arr, n, m);
 
     printMatrix(arr, n, m);
 
