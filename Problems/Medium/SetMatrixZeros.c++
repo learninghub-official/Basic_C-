@@ -67,7 +67,7 @@ void SetMatrixZerosBrute(int arr[][MAX], int n, int m) {
 // }
 
 void SetMatrixZerosOptimal(int arr[][MAX], int n, int m){
-
+    
 }
 
 void printMatrix(int arr[][MAX], int n, int m) {
