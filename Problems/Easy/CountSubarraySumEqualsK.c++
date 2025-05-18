@@ -91,8 +91,8 @@ int main() {
         cin >> arr[i];
     }
 
-    // CountSubarraySumEqualsKBrute(arr, n, k);
-    CountSubarraySumEqualsKBetter(arr, n, k);
+    CountSubarraySumEqualsKBrute(arr, n, k);
+    // CountSubarraySumEqualsKBetter(arr, n, k);
 }
 
 
