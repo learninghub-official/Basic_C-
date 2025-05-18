@@ -37,7 +37,32 @@
 #include <vector>
 using namespace std;
 
+
 void CountSubarraySumEqualsKBrute(int arr[], int n, int k) {
+    int count = 0;
+
+    // Loop for all subarrays
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            int sum = 0;  // Reset sum for every subarray (i to j)
+
+            // Sum the elements from index i to j
+            for (int b = i; b <= j; b++) {
+                sum += arr[b];
+            }
+
+            // If subarray sum equals k, increment count
+            if (sum == k) {
+                count++;
+            }
+        }
+    }
+
+    // Print total count of such subarrays
+    cout << count << endl;
+}
+
+void CountSubarraySumEqualsKBetter(int arr[], int n, int k) {
     int count = 0;
 
     // Traverse all possible subarrays
@@ -66,7 +91,8 @@ int main() {
         cin >> arr[i];
     }
 
-    CountSubarraySumEqualsKBrute(arr, n, k);
+    // CountSubarraySumEqualsKBrute(arr, n, k);
+    CountSubarraySumEqualsKBetter(arr, n, k);
 }
 
 
