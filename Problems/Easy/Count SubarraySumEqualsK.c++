@@ -3,14 +3,19 @@
 using namespace std;
 
 void CountSubarraySumEqualsK(int arr[] , int n, int k){
+    int count = 0;
+    int sum = 0;
     for(int i = 0 ; i < n ; i++){
         for(int j = 0 ; j < n ; j++){
-            int sum = 0;
             for(int b = i ; b = j ; b++){
                 sum += arr[b];
             }
         }
+        if(sum == k){
+            count++;
+        }
     }
+    cout<<count;
 }
 
 int main (){
@@ -23,4 +28,6 @@ int main (){
     for(int i = 0 ; i < n ; i++){
         cin>>arr[i];
     }
+    
+    CountSubarraySumEqualsK(arr, n , k);
 }
