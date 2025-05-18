@@ -11,6 +11,22 @@ void RotateArrayby90DegreesBrute(vector<vector<int>> &arr, int n, int m){
     arr = temp;
 }
 
+
+void RotateArrayby90DegreesBetter(vector<vector<int>> &arr, int n, int m){
+    for(int i = 0 ; i < n-1 ; i++){
+        for(int j = i+1 ; j<n ; j++){
+            swap(arr[i][j] , arr[j][i]);
+        }
+    }
+    for(int i = 0 ; i<n ; i++){
+        reverse(arr[i].begin(), arr[i].end());
+    }
+}
+
+void RotateArrayby90Degreesoptimal(vector<vector<int>> &arr, int n, int m){
+
+}
+
 void PrintMatrix(const vector<vector<int>> &arr) {
     for (auto &row : arr) {
         for (auto val : row) {
@@ -35,7 +51,8 @@ int main(){
     }
 
 
-    RotateArrayby90DegreesBrute(arr, n, m);
+    // RotateArrayby90DegreesBrute(arr, n, m);
+    RotateArrayby90DegreesBetter(arr, n, m);
 
     cout << "Rotated Matrix:\n";
     PrintMatrix(arr);
