@@ -80,6 +80,10 @@ void CountSubarraySumEqualsKBetter(int arr[], int n, int k) {
     cout << "Number of subarrays with sum " << k << " is: " << count << endl;
 }
 
+void CountSubarraySumEqualsKOptimal(int arr[], int n, int k){
+
+} 
+
 int main() {
     int n, k;
     cout << "First enter the size of array and then enter the sum to search for:" << endl;
@@ -91,8 +95,9 @@ int main() {
         cin >> arr[i];
     }
 
-    CountSubarraySumEqualsKBrute(arr, n, k);
+    // CountSubarraySumEqualsKBrute(arr, n, k);
     // CountSubarraySumEqualsKBetter(arr, n, k);
+    CountSubarraySumEqualsKOptimal(arr, n, k);
 }
 
 
