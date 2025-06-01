@@ -99,7 +99,7 @@ int main() {
     // CountSubarraySumEqualsKBetter(arr, n, k);
     CountSubarraySumEqualsKOptimal(arr, n, k);
 }
-hey i missed
+hey i
 
 /*
 
