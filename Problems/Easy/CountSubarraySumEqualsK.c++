@@ -35,6 +35,7 @@
 
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
 
@@ -81,7 +82,9 @@ void CountSubarraySumEqualsKBetter(int arr[], int n, int k) {
 }
 
 void CountSubarraySumEqualsKOptimal(int arr[], int n, int k){
-
+    map<int , int> mpp;
+    mpp[0] = 1;
+    int preSum = 0, count = 0;
 } 
 
 int main() {
