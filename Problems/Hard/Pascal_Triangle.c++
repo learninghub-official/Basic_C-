@@ -60,25 +60,117 @@
 
 // ________________________________________________________
 
+/*
+    Program: Print the nth Row of Pascal's Triangle
+    Description:
+    - Efficiently prints the entire nth row (0-based index) of Pascal's Triangle.
+    - Uses combinatorial logic to compute binomial coefficients without factorials.
 
-#include<iostream>
+    Logic:
+    - C(n, 0) = 1
+    - C(n, i) = C(n, i-1) * (n - i) / i
+    - This approach avoids recalculating factorials and is time-efficient.
+
+    Example:
+    Input: 5
+    Output: 1 5 10 10 5 1   // 5th row of Pascal's Triangle (0-indexed)
+
+    Usage:
+    - Takes a single integer `n` as input from the user.
+    - Prints the entire nth row (0-based index) of Pascal’s Triangle.
+*/
+
+// #include<iostream>
+// using namespace std;
+
+// void ProblemType2(int n){
+//     long long res = 1;
+//     cout << res << " ";  // C(n, 0) is always 1
+
+//     for(int i = 1 ; i < n; i++){
+//         res = res * (n - i );  // Equivalent to res *= (n - i)
+//         res = res / i;            // Divide by i (to get C(n, i))
+//         cout << res << " ";
+//     }
+
+//     cout << endl;
+// }
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     ProblemType2(n);
+// }
+
+
+// ______________________________________________________________
+// Problem type 3
+
+/*
+    Program: Pascal's Triangle Generator
+    Description:
+    - Generates Pascal's Triangle up to N rows using a combinatorial approach.
+    - Each row is built based on the formula:
+        C(n, r) = C(n, r-1) * (n - r) / r
+    - This avoids calculating factorials and is more efficient.
+
+    Key Functions:
+    1. generateRow(int row):
+       - Generates a single row of Pascal's Triangle using the above formula.
+       - Uses long long to avoid overflow during intermediate multiplication.
+
+    2. pascalTriangle(int N):
+       - Calls generateRow() from 1 to N to build the full triangle.
+
+    Usage:
+    - Takes integer input N from the user.
+    - Outputs Pascal's Triangle with N rows.
+*/
+
+#include <iostream>
+#include <vector>
 using namespace std;
 
-void ProblemType2(int n){
-    long long res = 1;
-    cout << res << " ";  // C(n, 0) is always 1
+// Function to generate a specific row in Pascal's Triangle
+vector<int> generateRow(int row) {
+    long long ans = 1;
+    vector<int> ansRow;
+    ansRow.push_back(1);  // First element is always 1
 
-    for(int i = 1 ; i < n; i++){
-        res = res * (n - i );  // Equivalent to res *= (n - i)
-        res = res / i;            // Divide by i (to get C(n, i))
-        cout << res << " ";
+    for (int col = 1; col < row; col++) {
+        ans = ans * (row - col);
+        ans = ans / col;
+        ansRow.push_back(ans);
     }
 
-    cout << endl;
+    return ansRow;
 }
 
-int main(){
-    int n;
-    cin>>n;
-    ProblemType2(n);
+// Function to generate the entire Pascal's Triangle up to row N
+vector<vector<int>> pascalTriangle(int N) {
+    vector<vector<int>> ans;
+
+    for (int i = 1; i <= N; i++) {
+        ans.push_back(generateRow(i));
+    }
+
+    return ans;
+}
+
+// Driver code to test the function
+int main() {
+    int N;
+    cout << "Enter number of rows for Pascal's Triangle: ";
+    cin >> N;
+
+    vector<vector<int>> triangle = pascalTriangle(N);
+
+    for (const auto& row : triangle) {
+        for (int val : row) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
 }
