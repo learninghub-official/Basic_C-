@@ -14,7 +14,7 @@ Explaination:
 
 // We compute C(n, r) = C(row-1, col-1) using an iterative method to avoid large factorials.
 // Initialize result as 1 (C(n, 0) = 1).
-// Use the multiplicative formula:
+// Use the multiplicative formula or Combination Formula: 
 // C(n, r) = C(n, r-1) * (n - r + 1) / r
 // Or in a loop:
 // result = result * (n - i) / (i + 1), for i = 0 to r - 1
