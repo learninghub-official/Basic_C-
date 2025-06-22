@@ -4,7 +4,7 @@ using namespace std;
 
 void Approach1BruteForce(int arr[], int n){
     vector<int> ls;
-    for(auto t : ls){
+    for(int t = 0; t < n; t++){
         if(ls.size() == 0 || ls[0] != arr[t]){
             int cnt = 0;
             for(int i = 0 ; i < n; i++){
@@ -21,7 +21,7 @@ void Approach1BruteForce(int arr[], int n){
         }
     }
     for(auto it : ls){
-        cout<<it<<" , "<<endl;
+        cout<<it<<endl;
     }
 }
 
@@ -31,7 +31,7 @@ int main(){
 
     int arr[n];
     for(int i = 0 ; i < n ; i++){
-        cin>>i;
+        cin>>arr[i];
     }
 
     Approach1BruteForce(arr, n);
