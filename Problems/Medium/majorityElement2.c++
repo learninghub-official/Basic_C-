@@ -4,7 +4,25 @@ using namespace std;
 
 void Approach1BruteForce(int arr[], int n){
     vector<int> ls;
-
+    for(auto t : ls){
+        if(ls.size() == 0 || ls[0] != arr[t]){
+            int cnt = 0;
+            for(int i = 0 ; i < n; i++){
+                if(arr[i] == arr[t]){
+                    cnt++;
+                }
+            }
+            if(cnt > n/3){
+                ls.push_back(arr[t]);
+            }
+        }
+        if(ls.size() == 2){
+            break;
+        }
+    }
+    for(auto it : ls){
+        cout<<it<<" , "<<endl;
+    }
 }
 
 int main(){
