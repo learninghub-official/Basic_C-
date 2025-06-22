@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void Approach1(int arr[], int n){
+void Approach1BruteForce(int arr[], int n){
 
 }
 
@@ -14,5 +14,5 @@ int main(){
         cin>>i;
     }
 
-    Approach1(arr, n);
+    Approach1BruteForce(arr, n);
 }
