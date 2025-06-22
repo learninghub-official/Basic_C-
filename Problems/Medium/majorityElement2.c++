@@ -1,7 +1,9 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 void Approach1BruteForce(int arr[], int n){
+    vector<int> ls;
 
 }
 
