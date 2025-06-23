@@ -36,4 +36,4 @@ int main(){
 
     Approach1BruteForce(arr, n);
 }
-// good to
+// good to have
