@@ -38,4 +38,4 @@ int main(){
 }
 
 ok
-teste
+tes
