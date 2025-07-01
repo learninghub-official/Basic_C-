@@ -78,17 +78,17 @@ vector<int> majorityElementBoyerMoore(vector<int> v) {
 int main() {
     vector<int> arr = {11, 33, 33, 11, 33, 11};
 
-    cout << "Brute Force: ";
-    for (int x : majorityElementBrute(arr)) cout << x << " ";
-    cout << "\n";
+    // cout << "Brute Force: ";
+    // for (int x : majorityElementBrute(arr)) cout << x << " ";
+    // cout << "\n";
 
     // cout << "Hash Map: ";
     // for (int x : majorityElementHashMap(arr)) cout << x << " ";
     // cout << "\n";
 
-    // cout << "Boyer-Moore Voting: ";
-    // for (int x : majorityElementBoyerMoore(arr)) cout << x << " ";
-    // cout << "\n";
+    cout << "Boyer-Moore Voting: ";
+    for (int x : majorityElementBoyerMoore(arr)) cout << x << " ";
+    cout << "\n";
 
     return 0;
 }
